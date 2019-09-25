@@ -22,7 +22,7 @@ client.on('ready', () => {
 });
 
 client.on('message', async message => {
-    let firstVote = ":one: Normale (Zone Rapide/Mortelle)\n:two: Course de voiture/moto\n:three: War mode'";
+    let firstVote = ":one: Normale (Zone Rapide/Mortelle)\n:two: Course de voiture/moto\n:three: War mode";
     let voteChannel = client.channels.find(channel => channel.name === 'votes');
 
     // react only on !vote messages
