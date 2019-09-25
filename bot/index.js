@@ -39,10 +39,9 @@ client.on('message', function(message) {
             voteChannel
                 .send(firstVote)
                 .then((postedMessage) => {
-                    postedMessage
-                        .react(emojiOne)
-                        .react(emojiTwo)
-                        .react(emojiThree);
+                    postedMessage.react(emojiOne);
+                    postedMessage.react(emojiTwo);
+                    postedMessage.react(emojiThree);
                 });
         }
     }
