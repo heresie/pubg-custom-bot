@@ -38,7 +38,7 @@ client.on('message', async message => {
                         console.log('One of the message reactions could not be processed.');
                     }
                 })
-                .then(() => {
+                .then(async => {
                     voteChannel.send(timerMessage);
                     await new Promise(done => setTimeout(done, 5000));
                     voteChannel.send('Fin des votes');
