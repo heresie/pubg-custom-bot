@@ -1,0 +1,30 @@
+{
+  "name": "pubg-custom-bot",
+  "description": "Discord Bot for PUBG Custom Games",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/ppataki/pubg-custom-bot.git"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "polls",
+    "pubg",
+    "custom"
+  ],
+  "author": "Pierre PATAKI",
+  "license": "Apache Licence 2.0",
+  "bugs": {
+    "url": "https://gitlab.com/ppataki/pubg-custom-bot/issues"
+  },
+  "homepage": "https://gitlab.com/ppataki/pubg-custom-bot",
+  "dependencies": {
+    "discord.js": "^11.5.1"
+  },
+  "devDependencies": {}
+}
