@@ -22,9 +22,9 @@ client.on('ready', () => {
 client.on('message', function(message) {
     let firstVote = ":one: Normale (Zone Rapide/Mortelle)\n:two: Course de voiture/moto\n:three: War mode'";
 
-    let emojiOne   = message.guild.emojis.find(emoji => emoji.name === "one");
-    let emojiTwo   = message.guild.emojis.find(emoji => emoji.name === "two");
-    let emojiThree = message.guild.emojis.find(emoji => emoji.name === "three");
+    let emojiOne   = client.emojis.find(emoji => emoji.name === "one");
+    let emojiTwo   = client.emojis.find(emoji => emoji.name === "two");
+    let emojiThree = client.emojis.find(emoji => emoji.name === "three");
 
     let voteChannel = client.channels.find(channel => channel.name === "votes");
 
