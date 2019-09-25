@@ -17,7 +17,7 @@ client.on('ready', () => {
     })
 });
 
-client.on('message', function(message) {
+client.on('message', async message => {
     let firstVote = ":one: Normale (Zone Rapide/Mortelle)\n:two: Course de voiture/moto\n:three: War mode'";
     let voteChannel = client.channels.find(channel => channel.name === 'votes');
 
@@ -30,13 +30,16 @@ client.on('message', function(message) {
             voteChannel
                 .send(firstVote)
                 .then((postedMessage) => {
-                    postedMessage.react(emojiCharacters[1]);
-                    postedMessage.react(emojiCharacters[2]);
-                    postedMessage.react(emojiCharacters[3]);
+                    try {
+                        await postedMessage.react(emojiCharacters[1]);
+                        await postedMessage.react(emojiCharacters[2]);
+                        await postedMessage.react(emojiCharacters[3]);
+                    } catch (error) {
+                        console.log('One of the message reactions could not be processed.');
+                    }
                 })
-                .send(timerMessage)
-                .then((postedMessage) => {
-                    postedMessage.react(emojiCharacters[10]).react(emojiCharacters[9]);
+                .then(() => {
+                    voteChannel.send(timerMessage);
                 });
         }
     }
