@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const auth = require('./credentials/auth.json');
+const emojiCharacters = require('./emojiCharacters');
 const adminRoleName = 'Fondateurs';
 
 
@@ -39,9 +40,9 @@ client.on('message', function(message) {
             voteChannel
                 .send(firstVote)
                 .then((postedMessage) => {
-                    postedMessage.react(emojiOne);
-                    postedMessage.react(emojiTwo);
-                    postedMessage.react(emojiThree);
+                    postedMessage.react(emojiCharacters[1]);
+                    postedMessage.react(emojiCharacters[2]);
+                    postedMessage.react(emojiCharacters[3]);
                 });
         }
     }
