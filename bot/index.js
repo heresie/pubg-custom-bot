@@ -45,7 +45,7 @@ client.on('message', async message => {
                 .then(async() => {
                     voteChannel.send(timerStartMessage);
                     await new Promise(done => setTimeout(done, (maxResponseDelay - warningDelay) * 1000));
-                    voteChannel.send(timerFinishMessage);
+                    voteChannel.send(timerWarningMessage);
                     await new Promise(done => setTimeout(done, warningDelay * 1000));
                     voteChannel.send(timerEndMessage);
                 });
