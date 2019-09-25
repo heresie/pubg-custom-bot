@@ -38,7 +38,7 @@ client.on('message', function(message) {
 
             voteChannel
                 .send(firstVote)
-                .then(postedMessage => {
+                .then((postedMessage) => {
                     postedMessage
                         .react(emojiOne)
                         .react(emojiTwo)
