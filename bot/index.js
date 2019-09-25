@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const auth = require('./credentials/auth.json');
 const emojiCharacters = require('./emojiCharacters');
 const adminRoleName = 'Fondateurs';
-const timerMessage = 'Vous avez 60 secondes pour voter ...';
+const timerMessage = ':clock1: Vous avez 60 secondes pour voter ...';
 
 let voteInProgress = false;
 
@@ -40,6 +40,8 @@ client.on('message', async message => {
                 })
                 .then(() => {
                     voteChannel.send(timerMessage);
+                    await new Promise(done => setTimeout(done, 5000));
+                    voteChannel.send('Fin des votes');
                 });
         }
     }
