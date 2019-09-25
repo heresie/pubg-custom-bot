@@ -7,7 +7,7 @@ const warningDelay = 5;
 const maxResponseDelay = 60;
 const timerStartMessage = `:clock1: Vous avez ${maxResponseDelay} secondes pour voter ...`;
 const timerWarningMessage = `:alarm_clock: Il vous reste ${warningDelay} secondes avant la fin des votes`;
-const timerEndMessage = `:octogonal_sign: Fin des votes`;
+const timerEndMessage = `:octagonal_sign: Fin des votes`;
 
 let voteInProgress = false;
 
