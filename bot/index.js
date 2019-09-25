@@ -3,7 +3,11 @@ const client = new Discord.Client();
 const auth = require('./credentials/auth.json');
 const emojiCharacters = require('./emojiCharacters');
 const adminRoleName = 'Fondateurs';
-const timerMessage = ':clock1: Vous avez 60 secondes pour voter ...';
+const finishResponseTime = 5;
+const maxResponseTime = 60;
+const timerStartMessage = `:clock1: Vous avez ${maxResponseTime} secondes pour voter ...`;
+const timerFinishMessage = `:alarm_clock: Il vous reste ${finishResponseTime} secondes avant la fin des votes`;
+const timerEndMessage = `:octogonal_sign: Fin des votes`;
 
 let voteInProgress = false;
 
@@ -39,9 +43,10 @@ client.on('message', async message => {
                     }
                 })
                 .then(async() => {
-                    voteChannel.send(timerMessage);
-                    await new Promise(done => setTimeout(done, 5000));
-                    voteChannel.send('Fin des votes');
+                    voteChannel.send(timerStartMessage);
+                    voteChannel.send(timerFinishMessage);
+                    await new Promise(done => setTimeout(done, finishResponseTime * 1000));
+                    voteChannel.send(timerEndMessage);
                 });
         }
     }
