@@ -3,12 +3,9 @@ const client = new Discord.Client();
 const auth = require('./credentials/auth.json');
 const emojiCharacters = require('./emojiCharacters');
 const adminRoleName = 'Fondateurs';
-
-
+const timerMessage = 'Vous avez 60 secondes pour voter ...';
 
 let voteInProgress = false;
-
-
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
@@ -22,11 +19,6 @@ client.on('ready', () => {
 
 client.on('message', function(message) {
     let firstVote = ":one: Normale (Zone Rapide/Mortelle)\n:two: Course de voiture/moto\n:three: War mode'";
-
-    let emojiOne   = '\:one:';
-    let emojiTwo   = '\:two:';
-    let emojiThree = '\:three:';
-
     let voteChannel = client.channels.find(channel => channel.name === 'votes');
 
     // react only on !vote messages
@@ -35,14 +27,16 @@ client.on('message', function(message) {
         if (!message.member.roles.find(r => r.name === adminRoleName)) {
             message.reply(`You are not authorized to start a new custom vote.`);
         } else {
-            console.log(emojiOne);
-
             voteChannel
                 .send(firstVote)
                 .then((postedMessage) => {
                     postedMessage.react(emojiCharacters[1]);
                     postedMessage.react(emojiCharacters[2]);
                     postedMessage.react(emojiCharacters[3]);
+                })
+                .send(timerMessage)
+                .then((postedMessage) => {
+                    postedMessage.react(emojiCharacters[10]).react(emojiCharacters[9]);
                 });
         }
     }
