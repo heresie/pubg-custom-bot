@@ -29,7 +29,7 @@ client.on('message', async message => {
         } else {
             voteChannel
                 .send(firstVote)
-                .then((postedMessage) => {
+                .then(async postedMessage => {
                     try {
                         await postedMessage.react(emojiCharacters[1]);
                         await postedMessage.react(emojiCharacters[2]);
