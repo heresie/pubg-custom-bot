@@ -23,10 +23,10 @@ client.on('message', function(message) {
     let firstVote = ":one: Normale (Zone Rapide/Mortelle)\n:two: Course de voiture/moto\n:three: War mode'";
 
     let emojiOne   = '\:one:';
-    let emojiTwo   = client.emojis.find(emoji => emoji.name === "two");
-    let emojiThree = client.emojis.find(emoji => emoji.name === "three");
+    let emojiTwo   = '\:two:';
+    let emojiThree = '\:three:';
 
-    let voteChannel = client.channels.find(channel => channel.name === "votes");
+    let voteChannel = client.channels.find(channel => channel.name === 'votes');
 
     // react only on !vote messages
     if (message == '!vote' && !voteInProgress) {
@@ -39,8 +39,6 @@ client.on('message', function(message) {
             voteChannel
                 .send(firstVote)
                 .then(postedMessage => {
- const emojiList = message.guild.ReactionEmojiemojis.map((e, x) => (x + ' = ' + e) + ' | ' +e.name).join('\n');
-   message.channel.send(emojiList);
                     postedMessage
                         .react(emojiOne)
                         .react(emojiTwo)
