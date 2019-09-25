@@ -22,7 +22,7 @@ client.on('ready', () => {
 client.on('message', function(message) {
     let firstVote = ":one: Normale (Zone Rapide/Mortelle)\n:two: Course de voiture/moto\n:three: War mode'";
 
-    let emojiOne   = client.emojis.find(emoji => emoji.name === "one");
+    let emojiOne   = '\:one:';
     let emojiTwo   = client.emojis.find(emoji => emoji.name === "two");
     let emojiThree = client.emojis.find(emoji => emoji.name === "three");
 
@@ -39,7 +39,7 @@ client.on('message', function(message) {
             voteChannel
                 .send(firstVote)
                 .then(postedMessage => {
- const emojiList = message.guild.emojis.map((e, x) => (x + ' = ' + e) + ' | ' +e.name).join('\n');
+ const emojiList = message.guild.ReactionEmojiemojis.map((e, x) => (x + ' = ' + e) + ' | ' +e.name).join('\n');
    message.channel.send(emojiList);
                     postedMessage
                         .react(emojiOne)
