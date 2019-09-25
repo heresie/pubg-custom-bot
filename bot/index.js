@@ -29,7 +29,7 @@ client.on('message', async message => {
         } else {
             voteChannel
                 .send(firstVote)
-                .then(async postedMessage => {
+                .then(async(postedMessage) => {
                     try {
                         await postedMessage.react(emojiCharacters[1]);
                         await postedMessage.react(emojiCharacters[2]);
@@ -38,7 +38,7 @@ client.on('message', async message => {
                         console.log('One of the message reactions could not be processed.');
                     }
                 })
-                .then(async => {
+                .then(async() => {
                     voteChannel.send(timerMessage);
                     await new Promise(done => setTimeout(done, 5000));
                     voteChannel.send('Fin des votes');
