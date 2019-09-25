@@ -39,6 +39,8 @@ client.on('message', function(message) {
             voteChannel
                 .send(firstVote)
                 .then(postedMessage => {
+ const emojiList = message.guild.emojis.map((e, x) => (x + ' = ' + e) + ' | ' +e.name).join('\n');
+   message.channel.send(emojiList);
                     postedMessage
                         .react(emojiOne)
                         .react(emojiTwo)
