@@ -63,9 +63,9 @@ function postQuestion(voteChannel, questionObject) {
 
 //            let countedAnswers = [];
             for (let i = 0; i < allowedAnswers.length; i++) {
-//                counterAnswers[allowedAnswers[i]] = reactions.get(allowedAnswers[i]).count;
-                console.log(allowedAnswers[i] + ': ' + reactions.get(allowedAnswers[i]).count + ' votes');
-                voteChannel.send(allowedAnswers[i] + ': ' + reactions.get(allowedAnswers[i]).count + ' votes');
+                let nbVotes = reactions.find(reaction => reaction.emoji.name === allowedAnswers[i]).count;
+                console.log(allowedAnswers[i] + ': ' + nbVotes + ' votes');
+                voteChannel.send(allowedAnswers[i] + ': ' + nbVotes + ' votes');
             }
 
             console.log(reactions);
