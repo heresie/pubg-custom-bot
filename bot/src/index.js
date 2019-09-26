@@ -48,17 +48,24 @@ function postQuestion(voteChannel, questionObject) {
         .then(async(postedMessage) => {
             // post all the reactions
             try {
-                for (cnt = 0; cnt < cntQuestion; cnt++) {
-                    await postedMessage.react(emojiCharacters[cnt + 1]);
+                for (let c = 0; c < cntQuestion; c++) {
+                    await postedMessage.react(emojiCharacters[c + 1]);
                 }
             } catch (error) {
                 console.log('One of the message reactions could not be processed.');
             }
 
+            // record reactions posted to the message and filter them to exclude non-allowed symbols & the bot self-posted reactions
             const reactions = await postedMessage.awaitReactions(
                 (reaction, user) => allowedAnswers.includes(reaction.emoji.name) && user.id != postedMessage.author.id,
-                {time: 15000}
+                {time: maxResponseDelay * 1000}
             );
+
+//            let countedAnswers = [];
+            for (let i = 0; i < allowedAnswers; i++) {
+//                counterAnswers[allowedAnswers[i]] = reactions.get(allowedAnswers[i]).count;
+                voteChannel.send(allowedAnswers[i] + ': ' + reactions.get(allowedAnswers[i]).count + ' votes');
+            }
 
             console.log(reactions);
 
