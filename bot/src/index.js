@@ -61,14 +61,15 @@ function postQuestion(voteChannel, questionObject) {
                 {time: maxResponseDelay * 1000}
             );
 
-//            let countedAnswers = [];
+            console.log(reactions);
+
             for (let i = 0; i < allowedAnswers.length; i++) {
                 let nbVotes = reactions.find(reaction => reaction.emoji.name === allowedAnswers[i]).count;
-                console.log(allowedAnswers[i] + ': ' + nbVotes + ' votes');
-                voteChannel.send(allowedAnswers[i] + ': ' + nbVotes + ' votes');
+                console.log(allowedAnswers[i] + ' ' + nbVotes + ' votes');
+                voteChannel.send(allowedAnswers[i] + ' ' + nbVotes + ' votes');
             }
 
-            console.log(reactions);
+
 
         });
 /*
