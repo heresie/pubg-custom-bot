@@ -12,12 +12,29 @@ const adminRoleName = 'Fondateurs';
 
 // poll timers
 const warningDelay        = 5;
-const maxResponseDelay    = 20;
+const maxResponseDelay    = 5;
 
 // messages
 const timerStartMessage   = `:clock1: Vous avez ${maxResponseDelay} secondes pour voter ...`;
 const timerWarningMessage = `:alarm_clock: Il vous reste ${warningDelay} secondes avant la fin des votes`;
 const timerEndMessage     = `:octagonal_sign: Fin des votes`;
+
+let question = {
+    "text": "",
+    "nb_answers": 0,
+    "allowed_emojis": [],
+    "objs": {
+        "q": {},
+        "e": {}
+    },
+    "result": {
+        "answer": "",
+        "text": "",
+        "emoji": null,
+        "score": 0
+    },
+    "success": false
+}
 
 let voteInProgress = false;
 
@@ -31,47 +48,59 @@ client.on('ready', () => {
     })
 });
 
-function postQuestion(voteChannel, questionObject) {
-    
-    let txtQuestion = '';
-    let cntQuestion = questionObject.answers.length;
-    let allowedAnswers = [];
+function postQuestion(voteChannel, questionObj) {
 
-    for (ix1 = 0; ix1 < cntQuestion; ix1++) {
-        txtQuestion += emojiCharacters[ix1 + 1] + ' ' + questionObject.answers[ix1].title + "\n";
-        allowedAnswers.push(emojiCharacters[ix1 + 1]);
+    question.nb_answers = questionObj.answers.length;
+    for (let i = 0; i < question.nb_answers; i++) {
+        question.text += `${emojiCharacters[i + 1]} ${questionObj.answers[i].title}\n`;
+        question.allowed_emojis.push(emojiCharacters[i + 1]);
     }
 
     // let's go, post first message
     voteChannel
-        .send(txtQuestion)
-        .then(async(postedMessage) => {
-            // post all the reactions
+        .send(question.text)
+        .then(async (q) => {
             try {
-                for (let c = 0; c < cntQuestion; c++) {
-                    await postedMessage.react(emojiCharacters[c + 1]);
+                question.objs.q = q;
+
+                // post all the reactions
+                for (let i = 0; i < question.nb_answers; i++) {
+                    await question.objs.q.react(emojiCharacters[i + 1]);
                 }
+console.log('fin de post des reaction d init');
+                // record reactions posted to the message and filter them to exclude non-allowed symbols & the bot self-posted reactions
+                question.objs.e = await question.objs.q.awaitReactions(
+                    (reaction, user) => question.allowed_emojis.includes(reaction.emoji.name) && user.id != question.objs.q.author.id,
+                    {time: maxResponseDelay * 1000}
+                );
+console.log('fin d attente des reactions');
+                // crawl recorded reactions
+                for (let i = 0; i < question.allowed_emojis; i++) {
+console.log('debut crawl');
+                    let reaction = question.objs.e.find(reaction => reaction.emoji.name === question.allowed_emojis[i]);
+console.log('reaction');
+console.log(reaction);
+                    let votes = reaction === null ? 0 : reaction.count - 1;
+console.log('votes');
+console.log(votes);
+console.log('je compare' + question.result.score + " < " + votes);
+                    // check if there is a better score
+                    if (question.result.score < votes) {
+console.log('nouveau résultat en pole position');
+                        question.result.score = votes;
+                        question.result.answer = questionObj.answers[i];
+                        question.result.emoji = question.allowed_emojis[i];
+                    }
+                }
+
+                question.result.text = `La réponse ${question.result.answer} a remporté les suffrages avec ${question.result.score} votes.`;
+                await voteChannel.send(question.result.text);
+                console.log(question);
             } catch (error) {
-                console.log('One of the message reactions could not be processed.');
+                console.log(`An await error occured : ${error}`);
             }
-
-            // record reactions posted to the message and filter them to exclude non-allowed symbols & the bot self-posted reactions
-            const reactions = await postedMessage.awaitReactions(
-                (reaction, user) => allowedAnswers.includes(reaction.emoji.name) && user.id != postedMessage.author.id,
-                {time: maxResponseDelay * 1000}
-            );
-
-            console.log(reactions);
-
-            for (let i = 0; i < allowedAnswers.length; i++) {
-                let nbVotes = reactions.find(reaction => reaction.emoji.name === allowedAnswers[i]).count;
-                console.log(allowedAnswers[i] + ' ' + nbVotes + ' votes');
-                voteChannel.send(allowedAnswers[i] + ' ' + nbVotes + ' votes');
-            }
-
-
-
         });
+}
 /*
         .then(async() => {
             // post the waiting messages
@@ -95,11 +124,9 @@ function postQuestion(voteChannel, questionObject) {
                     } catch (error) {}
                 });
     });*/
-}
 
 client.on('message', async message => {
 
-    let firstVote = ":one: Normale (Zone Rapide/Mortelle)\n:two: Course de voiture/moto\n:three: War mode";
     let voteChannel = client.channels.find(channel => channel.name === 'votes');
 
     // react only on !vote messages
@@ -115,3 +142,4 @@ client.on('message', async message => {
 });
 
 client.login(auth.token);
+
