@@ -62,7 +62,7 @@ function postQuestion(voteChannel, questionObject) {
             );
 
 //            let countedAnswers = [];
-            for (let i = 0; i < allowedAnswers; i++) {
+            for (let i = 0; i < allowedAnswers.count; i++) {
 //                counterAnswers[allowedAnswers[i]] = reactions.get(allowedAnswers[i]).count;
                 console.log(allowedAnswers[i] + ': ' + reactions.get(allowedAnswers[i]).count + ' votes');
                 voteChannel.send(allowedAnswers[i] + ': ' + reactions.get(allowedAnswers[i]).count + ' votes');
