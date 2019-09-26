@@ -7,4 +7,4 @@ COPY bot/ ${WORKDIR}
 RUN cd ${WORKDIR} && \
     npm install
 
-ENTRYPOINT ["node", "/bot/index.js"]
+ENTRYPOINT ["node", "/bot/src/index.js"]

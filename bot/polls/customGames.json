@@ -1,0 +1,2481 @@
+{
+    "author": "Hérésie",
+    "creationDate": "26-09-2019",
+    "version": "1.0",
+    "poll": {
+        "answers": [
+            {
+                "title": "Normale (zone rapide/mortelle)",
+                "answers": [
+                    {
+                        "title": "Erangel",
+                        "answers": [
+                            {
+                                "title": "Solo",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Duos",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Trios",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Squads",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Deux (grosses) équipes",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Trois (grosses) équipes",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            }
+                        ]
+                    },
+                    {  
+                        "title": "Miramar",
+                        "answers": [
+                            {
+                                "title": "Solo",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Duos",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Trios",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Squads",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Deux (grosses) équipes",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Trois (grosses) équipes",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            }                            
+                        ]
+                    },
+                    {
+                        "title": "Vikendi",
+                        "answers": [
+                            {
+                                "title": "Solo",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Duos",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Trios",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Squads",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Deux (grosses) équipes",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Trois (grosses) équipes",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            }                            
+                        ]
+                    },
+                    {
+                        "title": "Sanhok",
+                        "answers": [
+                            {
+                                "title": "Solo",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Duos",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Trios",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Squads",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Deux (grosses) équipes",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Trois (grosses) équipes",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            }                            
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Course de voitures/motos",
+                "answers": [
+                    {
+                        "title": "Dacias",
+                        "answers": [
+                            {
+                                "title": "Solo",
+                                "answers": [
+                                    {
+                                        "title": "Piégeurs autorisés",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Aucun piégeur",
+                                        "answers": []
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Duos",
+                                "answers": [
+                                    {
+                                        "title": "Piégeurs autorisés",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Aucun piégeur",
+                                        "answers": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Motos",
+                        "answers": [
+                            {
+                                "title": "Solo",
+                                "answers": [
+                                    {
+                                        "title": "Piégeurs autorisés",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Aucun piégeur",
+                                        "answers": []
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Duos",
+                                "answers": [
+                                    {
+                                        "title": "Piégeurs autorisés",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Aucun piégeur",
+                                        "answers": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Side-cars",
+                        "answers": [
+                            {
+                                "title": "Solo",
+                                "answers": [
+                                    {
+                                        "title": "Piégeurs autorisés",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Aucun piégeur",
+                                        "answers": []
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Duos",
+                                "answers": [
+                                    {
+                                        "title": "Piégeurs autorisés",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Aucun piégeur",
+                                        "answers": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Custom à Scénario (convois, assaut urbain, capture de véhicule, guerre des tranchées, destruction derby, ...)",
+                "answers": [
+                    {
+                        "title": "Convoi de véhicule",
+                        "answers": [
+                            {
+                                "title": "Gatka",
+                                "answers": []
+                            },
+                            {
+                                "title": "Yasnaya Polyana",
+                                "answers": []
+                            },
+                            {
+                                "title": "Pochinki",
+                                "answers": []
+                            },
+                            {
+                                "title": "Mylta",
+                                "answers": []
+                            },
+                            {
+                                "title": "Zharki",
+                                "answers": []
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Assaut Urbain",
+                        "answers": [
+                            {
+                                "title": "Gatka",
+                                "answers": []
+                            },
+                            {
+                                "title": "Yasnaya Polyana",
+                                "answers": []
+                            },
+                            {
+                                "title": "Pochinki",
+                                "answers": []
+                            },
+                            {
+                                "title": "Mylta",
+                                "answers": []
+                            },
+                            {
+                                "title": "Zharki",
+                                "answers": []
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Capture de véhicule",
+                        "answers": []
+                    },
+                    {
+                        "title": "Guerre des tranchées",
+                        "answers": []
+                    },
+                    {
+                        "title": "Traversée de pont",
+                        "answers": [
+                            {
+                                "title": "Pont de Ferry Pier",
+                                "answers": []
+                            },
+                            {
+                                "title": "Pont de Mylta",
+                                "answers": []
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Protection du VIP",
+                        "answers": [
+                            {
+                                "title": "Gatka",
+                                "answers": []
+                            },
+                            {
+                                "title": "Yasnaya Polyana",
+                                "answers": []
+                            },
+                            {
+                                "title": "Pochinki",
+                                "answers": []
+                            },
+                            {
+                                "title": "Mylta",
+                                "answers": []
+                            },
+                            {
+                                "title": "Zharki",
+                                "answers": []
+                            }                            
+                        ]
+                    },
+                    {
+                        "title": "Destruction Derby",
+                        "answers": []
+                    }
+                ]
+            },
+            {
+                "title": "War Mode",
+                "answers": [
+                    {
+                        "title": "Erangel",
+                        "answers": [
+                            {
+                                "title": "Solo",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Duos",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Trios",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Squads",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Deux (grosses) équipes",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Trois (grosses) équipes",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            }
+                        ]
+                    },
+                    {  
+                        "title": "Miramar",
+                        "answers": [
+                            {
+                                "title": "Solo",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Duos",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Trios",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Squads",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Deux (grosses) équipes",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Trois (grosses) équipes",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            }                            
+                        ]
+                    },
+                    {
+                        "title": "Vikendi",
+                        "answers": [
+                            {
+                                "title": "Solo",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Duos",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Trios",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Squads",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Deux (grosses) équipes",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Trois (grosses) équipes",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            }                            
+                        ]
+                    },
+                    {
+                        "title": "Sanhok",
+                        "answers": [
+                            {
+                                "title": "Solo",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Duos",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Trios",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Squads",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Deux (grosses) équipes",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Trois (grosses) équipes",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            }                            
+                        ]
+                    },
+                    {
+                        "title": "Camp Jackal",
+                        "answers": [
+                            {
+                                "title": "Solo",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Duos",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Trios",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Squads",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Deux (grosses) équipes",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Trois (grosses) équipes",
+                                "answers": [
+                                    {
+                                        "title": "Armes normales",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Western (Winchester/Colt)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Arbalètes",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Pistols",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Assault Rifles (AR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Sniper Rifles (SR)",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "VSS",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Overpower",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Shotguns",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            }                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
