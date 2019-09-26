@@ -75,7 +75,7 @@ console.log('fin de post des reaction d init');
                 );
 console.log('fin d attente des reactions');
                 // crawl recorded reactions
-                for (let i = 0; i < question.allowed_emojis; i++) {
+                for (let i = 0; i < question.allowed_emojis.length; i++) {
 console.log('debut crawl');
                     let reaction = question.objs.e.find(reaction => reaction.emoji.name === question.allowed_emojis[i]);
 console.log('reaction');
