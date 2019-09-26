@@ -54,9 +54,8 @@ function postQuestion(voteChannel, questionObject) {
             }
 
             const reactions = await postedMessage.awaitReactions(reaction => {
-                console.log(reaction.emoji.name);
-                return reaction.emoji.name === "toto";
-            }, {time: 10000});
+                return reaction;
+            }, {time: 15000});
 
             console.log(reactions);
 
