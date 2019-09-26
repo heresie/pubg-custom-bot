@@ -54,9 +54,9 @@ function postQuestion(voteChannel, questionObject) {
             } catch (error) {
                 console.log('One of the message reactions could not be processed.');
             }
-//&& user.id != postedMessage.author.id, 
+
             const reactions = await postedMessage.awaitReactions(
-                (reaction) => allowedAnswers.includes(reaction.emoji.name),
+                (reaction, user) => allowedAnswers.includes(reaction.emoji.name) && user.id != postedMessage.author.id,
                 {time: 15000}
             );
 
