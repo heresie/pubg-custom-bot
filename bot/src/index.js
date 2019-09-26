@@ -35,9 +35,11 @@ function postQuestion(voteChannel, questionObject) {
     
     let txtQuestion = '';
     let cntQuestion = questionObject.answers.length;
+    let allowedAnswers = [];
 
     for (ix1 = 0; ix1 < cntQuestion; ix1++) {
         txtQuestion += emojiCharacters[ix1 + 1] + ' ' + questionObject.answers[ix1].title + "\n";
+        allowedAnswers.push(emojiCharacters[ix1 +1]);
     }
 
     // let's go, post first message
@@ -52,10 +54,11 @@ function postQuestion(voteChannel, questionObject) {
             } catch (error) {
                 console.log('One of the message reactions could not be processed.');
             }
-
-            const reactions = await postedMessage.awaitReactions(reaction => {
-                return reaction;
-            }, {time: 15000});
+//&& user.id != postedMessage.author.id, 
+            const reactions = await postedMessage.awaitReactions(
+                (reaction) => allowedAnswers.includes(reaction.emoji.name),
+                {time: 15000}
+            );
 
             console.log(reactions);
 
