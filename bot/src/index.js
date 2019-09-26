@@ -12,7 +12,7 @@ const adminRoleName = 'Fondateurs';
 
 // poll timers
 const warningDelay        = 5;
-const maxResponseDelay    = 60;
+const maxResponseDelay    = 20;
 
 // messages
 const timerStartMessage   = `:clock1: Vous avez ${maxResponseDelay} secondes pour voter ...`;
@@ -31,6 +31,61 @@ client.on('ready', () => {
     })
 });
 
+function postQuestion(voteChannel, questionObject) {
+    
+    let txtQuestion = '';
+    let cntQuestion = questionObject.answers.length;
+
+    for (ix1 = 0; ix1 < cntQuestion; ix1++) {
+        txtQuestion += emojiCharacters[ix1 + 1] + ' ' + pollQuestions.poll.answers[ix1].title + "\n";
+    }
+
+    // let's go, post first message
+    voteChannel
+        .send(txtQuestion)
+        .then(async(postedMessage) => {
+            // post all the reactions
+            try {
+                for (cnt = 0; cnt < cntQuestion; cnt++) {
+                    await postedMessage.react(emojiCharacters[cnt + 1]);
+                }
+            } catch (error) {
+                console.log('One of the message reactions could not be processed.');
+            }
+
+            const reactions = await postedMessage.awaitReactions(reaction => {
+                console.log(reaction.emoji.name);
+                return reaction.emoji.name === "toto";
+            }, {time: 10000});
+
+            console.log(reactions);
+
+        });
+/*
+        .then(async() => {
+            // post the waiting messages
+            voteChannel
+                .send(timerStartMessage)
+                .then(async() => {
+                    try {
+                        // wait till the timer warning
+                        await new Promise(done => setTimeout(done, (maxResponseDelay - warningDelay) * 1000));
+                        voteChannel.send(timerWarningMessage);
+
+                        // wait till the end of the question
+                        await new Promise(done => setTimeout(done, warningDelay * 1000));
+                        voteChannel
+                            .send(timerEndMessage)
+                            .then(async() => {
+                                const reactions = await postedMessage.awaitReactions(reaction => {
+                                    return reaction.emoji.name === "toto";
+                                }, {time: 10000})
+                            });
+                    } catch (error) {}
+                });
+    });*/
+}
+
 client.on('message', async message => {
 
     let firstVote = ":one: Normale (Zone Rapide/Mortelle)\n:two: Course de voiture/moto\n:three: War mode";
@@ -44,38 +99,7 @@ client.on('message', async message => {
             message.author.send(`You are not authorized to start a new custom vote.`);
         } else {
 
-            let txtQuestion = '';
-            let cntQuestion = pollQuestions.poll.answers.length;
-            for (ix1 = 0; ix1 < pollQuestions.poll.answers.length; ix1++) {
-                txtQuestion += emojiCharacters[ix1+1] + ' ' + pollQuestions.poll.answers[ix1].title + "\n";
-            }
-        
-            // let's go, post first message
-            voteChannel
-                .send(txtQuestion)
-                .then(async(postedMessage) => {
-                    // post all the reactions
-                    try {
-                        for (cnt = 0; cnt < cntQuestion; cnt++) {
-                            await postedMessage.react(emojiCharacters[cnt+1]);
-                        }
-                    } catch (error) {
-                        console.log('One of the message reactions could not be processed.');
-                    }
-                })
-                .then(async() => {
-                    // post the waiting messages
-                    voteChannel
-                        .send(timerStartMessage)
-                        .then(async() => {
-                            try {
-                                await new Promise(done => setTimeout(done, (maxResponseDelay - warningDelay) * 1000));
-                                voteChannel.send(timerWarningMessage);
-                                await new Promise(done => setTimeout(done, warningDelay * 1000));
-                                voteChannel.send(timerEndMessage);
-                            } catch (error) {}
-                        });
-            });
+
         }
     }
 });
