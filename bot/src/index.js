@@ -67,33 +67,27 @@ function postQuestion(voteChannel, questionObj) {
                 for (let i = 0; i < question.nb_answers; i++) {
                     await question.objs.q.react(emojiCharacters[i + 1]);
                 }
-console.log('fin de post des reaction d init');
+
                 // record reactions posted to the message and filter them to exclude non-allowed symbols & the bot self-posted reactions
                 question.objs.e = await question.objs.q.awaitReactions(
                     (reaction, user) => question.allowed_emojis.includes(reaction.emoji.name) && user.id != question.objs.q.author.id,
                     {time: maxResponseDelay * 1000}
                 );
-console.log('fin d attente des reactions');
+
                 // crawl recorded reactions
                 for (let i = 0; i < question.allowed_emojis.length; i++) {
-console.log('debut crawl');
                     let reaction = question.objs.e.find(reaction => reaction.emoji.name === question.allowed_emojis[i]);
-console.log('reaction');
-console.log(reaction);
                     let votes = reaction === null ? 0 : reaction.count - 1;
-console.log('votes');
-console.log(votes);
-console.log('je compare' + question.result.score + " < " + votes);
+
                     // check if there is a better score
                     if (question.result.score < votes) {
-console.log('nouveau résultat en pole position');
                         question.result.score = votes;
-                        question.result.answer = questionObj.answers[i];
+                        question.result.answer = questionObj.answers[i].title;
                         question.result.emoji = question.allowed_emojis[i];
                     }
                 }
 
-                question.result.text = `La réponse ${question.result.answer} a remporté les suffrages avec ${question.result.score} votes.`;
+                question.result.text = `La réponse __${question.result.answer}__ a remporté les suffrages avec ${question.result.score} vote${question.result.score > 1 ? 's' : ''}`;
                 await voteChannel.send(question.result.text);
                 console.log(question);
             } catch (error) {
