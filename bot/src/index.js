@@ -39,7 +39,7 @@ function postQuestion(voteChannel, questionObject) {
 
     for (ix1 = 0; ix1 < cntQuestion; ix1++) {
         txtQuestion += emojiCharacters[ix1 + 1] + ' ' + questionObject.answers[ix1].title + "\n";
-        allowedAnswers.push(emojiCharacters[ix1 +1]);
+        allowedAnswers.push(emojiCharacters[ix1 + 1]);
     }
 
     // let's go, post first message
@@ -64,6 +64,7 @@ function postQuestion(voteChannel, questionObject) {
 //            let countedAnswers = [];
             for (let i = 0; i < allowedAnswers; i++) {
 //                counterAnswers[allowedAnswers[i]] = reactions.get(allowedAnswers[i]).count;
+                console.log(allowedAnswers[i] + ': ' + reactions.get(allowedAnswers[i]).count + ' votes');
                 voteChannel.send(allowedAnswers[i] + ': ' + reactions.get(allowedAnswers[i]).count + ' votes');
             }
 
