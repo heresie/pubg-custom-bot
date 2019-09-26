@@ -1,6 +1,6 @@
 // requirements
 const Discord = require('discord.js');
-const auth = require('./credentials/auth.json');
+const auth = require('../credentials/auth.json');
 const pollQuestions = require('../polls/customGames.json');
 const emojiCharacters = require('./emojiCharacters');
 
