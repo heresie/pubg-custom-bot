@@ -52,7 +52,7 @@ client.on('message', async message => {
         
             // let's go, post first message
             voteChannel
-                .send(question)
+                .send(txtQuestion)
                 .then(async(postedMessage) => {
                     // post all the reactions
                     try {
