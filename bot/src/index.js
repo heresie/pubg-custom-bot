@@ -47,7 +47,7 @@ client.on('message', async message => {
             let txtQuestion = '';
             let cntQuestion = pollQuestions.poll.answers.length;
             for (ix1 = 0; ix1 < pollQuestions.poll.answers.length; ix1++) {
-                txtQuestion += emojiCharacters[ix1] + ' ' + pollQuestions.poll.answers[ix1].title + "\n";
+                txtQuestion += emojiCharacters[ix1+1] + ' ' + pollQuestions.poll.answers[ix1].title + "\n";
             }
         
             // let's go, post first message
