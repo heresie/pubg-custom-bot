@@ -20,18 +20,17 @@ const timerWarningMessage = `:alarm_clock: Il vous reste ${warningDelay} seconde
 const timerEndMessage     = `:octagonal_sign: Fin des votes`;
 
 let question = {
-    "text": "",
     "nb_answers": 0,
     "allowed_emojis": [],
     "objs": {
         "q": {},
         "e": {}
     },
-    "result": {
-        "answer": "",
-        "text": "",
-        "emoji": null,
-        "score": 0
+    "results": [],
+    "winner": {},
+    "messages": {
+        "response": null,
+        "question": null,
     },
     "success": false
 }
@@ -52,13 +51,13 @@ function postQuestion(voteChannel, questionObj) {
 
     question.nb_answers = questionObj.answers.length;
     for (let i = 0; i < question.nb_answers; i++) {
-        question.text += `${emojiCharacters[i + 1]} ${questionObj.answers[i].title}\n`;
+        question.messages.question += `${emojiCharacters[i + 1]} ${questionObj.answers[i].title}\n`;
         question.allowed_emojis.push(emojiCharacters[i + 1]);
     }
 
     // let's go, post first message
     voteChannel
-        .send(question.text)
+        .send(question.messages.question)
         .then(async (q) => {
             try {
                 question.objs.q = q;
@@ -76,19 +75,48 @@ function postQuestion(voteChannel, questionObj) {
 
                 // crawl recorded reactions
                 for (let i = 0; i < question.allowed_emojis.length; i++) {
+                    // find the reactions
                     let reaction = question.objs.e.find(reaction => reaction.emoji.name === question.allowed_emojis[i]);
-                    let votes = reaction === null ? 0 : reaction.count - 1;
 
-                    // check if there is a better score
-                    if (question.result.score < votes) {
-                        question.result.score = votes;
-                        question.result.answer = questionObj.answers[i].title;
-                        question.result.emoji = question.allowed_emojis[i];
-                    }
+                    // add the results
+                    question.results.push({
+                        "score": reaction === null ? 0 : reaction.count - 1,
+                        "answer": questionObj.answers[i].title,
+                        "emoji": question.allowed_emojis[i]
+                    });
                 }
 
-                question.result.text = `La réponse __${question.result.answer}__ a remporté les suffrages avec ${question.result.score} vote${question.result.score > 1 ? 's' : ''}`;
-                await voteChannel.send(question.result.text);
+                // order the objects
+                //let orderedList = Object.keys(question.results).sort(function(a,b){return question.results[a]-question.results[b]});
+
+                let orderedList = question.results.slice(0).sort((a,b)=>{a.score - b.score});
+//                var byDate = arrayOfObjects.slice(0);
+//                byDate.sort(function(a,b) {
+//                    return a.born - b.born;
+//                });
+//                console.log('by date:');
+//                console.log(byDate);
+                console.log(orderedList);
+
+                // first find if there is a 
+//                for (let i = 0; i < question.results.length; i++) {
+//                    if (question.results[i].score )
+//                }
+//                    if (question.result.score != 0 && question.result.score == resultObj.score) {
+//                    } else if (question.result.score < votes) {
+//                        // check if there is a better score
+//                        question.result.score = votes;
+//                        question.result.answer = questionObj.answers[i].title;
+//                        question.result.emoji = question.allowed_emojis[i];
+//                    } 
+//                }
+//
+//                if (question.result.score == 0) {
+//                    
+//                } else if (question.result.scor)
+//
+//                question.response = `La réponse __${question.result.answer}__ a remporté les suffrages avec ${question.result.score} vote${question.result.score > 1 ? 's' : ''}`;
+//                await voteChannel.send(question.response);
                 console.log(question);
             } catch (error) {
                 console.log(`An await error occured : ${error}`);
