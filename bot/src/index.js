@@ -89,7 +89,7 @@ function postQuestion(voteChannel, questionObj) {
                 // order the objects
                 //let orderedList = Object.keys(question.results).sort(function(a,b){return question.results[a]-question.results[b]});
 
-                let orderedList = question.results.slice(0).sort((a,b)=>{a.score - b.score});
+                let orderedList = question.results.sort(function(a,b){return a.score - b.score;});
 //                var byDate = arrayOfObjects.slice(0);
 //                byDate.sort(function(a,b) {
 //                    return a.born - b.born;
