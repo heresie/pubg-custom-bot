@@ -7,60 +7,94 @@ const emojiCharacters = require('./emojiCharacters');
 // init
 const client = new Discord.Client();
 
+//// specific discord configuration
+//const adminRoleName = 'Fondateurs';
+//const pollChannelName = 'votes';
+//
+//// poll timers
+//const maxResponseDelay = 10;
+//const betweenQuestionsDelay = 3;
+//const startPollDelay = 1;
+
 // specific discord configuration
-const adminRoleName = 'Fondateurs';
+const adminRoleName = 'Responsable Custom';
+const pollChannelName = 'custom-vote';
 
 // poll timers
-const warningDelay        = 5;
-const maxResponseDelay    = 5;
+const maxResponseDelay = 45;
+const betweenQuestionsDelay = 3;
+const startPollDelay = 5;
 
-// messages
-const timerStartMessage   = `:clock1: Vous avez ${maxResponseDelay} secondes pour voter ...`;
-const timerWarningMessage = `:alarm_clock: Il vous reste ${warningDelay} secondes avant la fin des votes`;
-const timerEndMessage     = `:octagonal_sign: Fin des votes`;
+// the structure of this object is stored in the initQuestionObject method
+let question = {}
+let voteInProgress = false;
+let pubgEmoji = null;
 
-let question = {
-    "nb_answers": 0,
-    "allowed_emojis": [],
-    "objs": {
-        "q": {},
-        "e": {}
-    },
-    "results": [],
-    "winner": {},
-    "messages": {
-        "response": null,
-        "question": null,
-    },
-    "success": false
+// debug tool
+function dumpError(err) {
+
+    if (typeof err === 'object') {
+
+        if (err.message) {
+            console.log('\nMessage: ' + err.message)
+        }
+
+        if (err.stack) {
+            console.log('\nStacktrace:')
+            console.log('====================')
+            console.log(err.stack);
+        }
+
+    } else {
+        console.log('dumpError :: argument is not an object');
+    }
+
 }
 
-let voteInProgress = false;
+// reset global question object
+function initQuestionObject() {
+    question = {
+        "nb_answers": 0,
+        "allowed_emojis": [],
+        "objs": {
+            "q": {},
+            "e": {}
+        },
+        "results": [],
+        "winner": {},
+        "messages": {
+            "response": "",
+            "question": "",
+        },
+        "randomized": false,
+        "success": false
+    }    
+}
 
-client.on('ready', () => {
-    console.log(`Logged in as ${client.user.tag}!`);
+// main
+function startPoll(voteChannel, questionObj, recapChoices = []) {
 
-    client.user.setPresence({
-        game: {
-            name: '!vote'
-        }
-    })
-});
+    voteInProgress = true;
 
-function postQuestion(voteChannel, questionObj) {
+    // reset / empty the question object
+    initQuestionObject();
 
+    // get the allowed reactions
     question.nb_answers = questionObj.answers.length;
+
     for (let i = 0; i < question.nb_answers; i++) {
-        question.messages.question += `${emojiCharacters[i + 1]} ${questionObj.answers[i].title}\n`;
+        question.messages.question += `${emojiCharacters[i + 1]} \`${questionObj.answers[i].title}\`\n`;
         question.allowed_emojis.push(emojiCharacters[i + 1]);
     }
 
-    // let's go, post first message
+    // let's go
     voteChannel
         .send(question.messages.question)
         .then(async (q) => {
             try {
+
                 question.objs.q = q;
+                let unorderedList = [];
 
                 // post all the reactions
                 for (let i = 0; i < question.nb_answers; i++) {
@@ -79,89 +113,159 @@ function postQuestion(voteChannel, questionObj) {
                     let reaction = question.objs.e.find(reaction => reaction.emoji.name === question.allowed_emojis[i]);
 
                     // add the results
-                    question.results.push({
+                    unorderedList.push({
                         "score": reaction === null ? 0 : reaction.count - 1,
                         "answer": questionObj.answers[i].title,
-                        "emoji": question.allowed_emojis[i]
+                        "emoji": question.allowed_emojis[i],
+                        "index": i
                     });
                 }
 
-                // order the objects
-                //let orderedList = Object.keys(question.results).sort(function(a,b){return question.results[a]-question.results[b]});
+                // sort the results
+                question.results = unorderedList.sort(function(a,b){return b.score - a.score;});
 
-                let orderedList = question.results.sort(function(a,b){return a.score - b.score;});
-//                var byDate = arrayOfObjects.slice(0);
-//                byDate.sort(function(a,b) {
-//                    return a.born - b.born;
-//                });
-//                console.log('by date:');
-//                console.log(byDate);
-                console.log(orderedList);
+                // Winner is only when the first in the list have a different score that the second // if not, there is no winner and it's a tie
+                if (question.results.length > 1) {
 
-                // first find if there is a 
-//                for (let i = 0; i < question.results.length; i++) {
-//                    if (question.results[i].score )
-//                }
-//                    if (question.result.score != 0 && question.result.score == resultObj.score) {
-//                    } else if (question.result.score < votes) {
-//                        // check if there is a better score
-//                        question.result.score = votes;
-//                        question.result.answer = questionObj.answers[i].title;
-//                        question.result.emoji = question.allowed_emojis[i];
-//                    } 
-//                }
-//
-//                if (question.result.score == 0) {
-//                    
-//                } else if (question.result.scor)
-//
-//                question.response = `La réponse __${question.result.answer}__ a remporté les suffrages avec ${question.result.score} vote${question.result.score > 1 ? 's' : ''}`;
-//                await voteChannel.send(question.response);
+                    // if the best result is not 0 we can continue
+                    if (question.results[0].score != 0) {
+
+                        if (question.results[0].score != question.results[1].score) {
+
+                            // winner found! GG WP!
+                            question.winner = question.results[0];
+                            question.success = true;
+
+                        } else {
+
+                            // tie! randomize the winner *diceroll*
+                            let shortList = [];
+                            for (let i = 0; i < question.results.length; i++) {
+                                if (question.results[i].score == question.results[0].score) {
+                                    shortList.push(question.results[i]);
+                                }
+                            }
+
+                            // elect the randomized winner
+                            question.winner = shortList[Math.floor(Math.random() * shortList.length)];
+                            question.success = true;
+                            question.randomized = true;
+
+                        }
+
+                    } else {
+
+                        // is everybody afk?
+                        console.log('Is everybody afk?');
+
+                    }
+
+                } else {
+
+                    // if there is only one choice : just take the first element and stop
+                    question.winner = question.results[0];
+                    question.success = true;
+
+                }
+
+                let plural = (question.winner.score > 1) ? 's' : '';
+                let random = (question.randomized) ? 'a été tiré au sort' : 'a remporté les suffrages';
+
+                question.messages.response = (question.success) ? 
+                    `\`${question.winner.answer}\` ${random} (${question.winner.score} vote${plural})` :
+                    `Aucun vote enregistré. Arrêt du sondage.`;
+
+                await voteChannel.send(question.messages.response);
+
                 console.log(question);
+
+                await new Promise(done => setTimeout(done, betweenQuestionsDelay * 1000));
+
+                // if there is a success
+                if (question.success) {
+
+                    // record the answer
+                    recapChoices.push(question.winner.answer);
+
+                    // if there is another question beyond
+                    if (questionObj.answers[question.winner.index].answers.length > 0) {
+
+                        startPoll(voteChannel, questionObj.answers[question.winner.index], recapChoices);
+
+                    } else {
+
+                        // end of poll
+                        voteInProgress = false;
+
+                        let r = recapChoices.join(', ');
+
+                        voteChannel.send(`:white_check_mark: Prochaine partie : \`${r}\`.`);
+                        voteChannel.send(`${pubgEmoji} reste un jeu, ne l'oubliez pas 🐔🍳`);
+
+                    }
+
+                } else {
+
+                    voteInProgress = false;
+
+                }
+
             } catch (error) {
-                console.log(`An await error occured : ${error}`);
+
+                dumpError(error);
+
             }
+
         });
 }
-/*
-        .then(async() => {
-            // post the waiting messages
-            voteChannel
-                .send(timerStartMessage)
-                .then(async() => {
-                    try {
-                        // wait till the timer warning
-                        await new Promise(done => setTimeout(done, (maxResponseDelay - warningDelay) * 1000));
-                        voteChannel.send(timerWarningMessage);
 
-                        // wait till the end of the question
-                        await new Promise(done => setTimeout(done, warningDelay * 1000));
-                        voteChannel
-                            .send(timerEndMessage)
-                            .then(async() => {
-                                const reactions = await postedMessage.awaitReactions(reaction => {
-                                    return reaction.emoji.name === "toto";
-                                }, {time: 10000})
-                            });
-                    } catch (error) {}
-                });
-    });*/
+client.on('ready', () => {
+
+    console.log(`Logged in as ${client.user.tag}!`);
+
+    client.user.setPresence({
+        game: {
+            name: 'Fox, mais t\'es où? Pas là'
+        }
+    })
+
+});
 
 client.on('message', async message => {
 
-    let voteChannel = client.channels.find(channel => channel.name === 'votes');
+    recapChoices = [];
+    let voteChannel = client.channels.find(channel => channel.name === pollChannelName);
+    pubgEmoji = message.guild.emojis.find(emoji => emoji.name === "pubg");
 
     // react only on !vote messages
     if (message == '!vote' && !voteInProgress) {
 
         // react only to admins
         if (!message.member.roles.find(r => r.name === adminRoleName)) {
-            message.author.send(`You are not authorized to start a new custom vote.`);
+
+            message.author.send(`Vous ne disposez pas du rôle ${adminRoleName} pour démarrer un vote.`);
+
         } else {
-            postQuestion(voteChannel, pollQuestions.poll);
+
+            if (!voteInProgress) {
+
+                voteChannel.send(`**Démarrage d'un nouveau sondage dans 3 secondes. Délai de vote : ${maxResponseDelay} secondes.**`)
+
+                await new Promise(done => setTimeout(done, startPollDelay * 1000));
+
+                startPoll(voteChannel, pollQuestions.poll);
+
+            } else {
+
+                message.author.send(`Un Custom vote est déjà en cours, attends qu'il soit fini pour lancer le suivant.`);
+
+            }
+
         }
+
     }
+
 });
 
+// authing to Discord
 client.login(auth.token);
-
