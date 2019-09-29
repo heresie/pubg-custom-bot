@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  discord-bot:
+    build: .
+    container_name: discord-bot
+    restart: always
+    # https://github.com/portainer/portainer/issues/2576
+    mem_swappiness: -1
+

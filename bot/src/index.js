@@ -21,7 +21,7 @@ const adminRoleName = 'Responsable Custom';
 const pollChannelName = 'custom-vote';
 
 // poll timers
-const maxResponseDelay = 45;
+const maxResponseDelay = 35;
 const betweenQuestionsDelay = 3;
 const startPollDelay = 5;
 
