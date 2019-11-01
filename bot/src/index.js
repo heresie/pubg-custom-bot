@@ -250,6 +250,7 @@ client.on('message', async message => {
             if (!voteInProgress) {
 
                 voteChannel.send(`**Démarrage d'un nouveau sondage dans 3 secondes. Délai de vote : ${maxResponseDelay} secondes.**`)
+                voteChannel.send(`${emojiCharacters['!']} **__Attention :__** Les votes réalisés avant l'apparition de toutes les propositions ne seront pas comptabilisés.`)
 
                 await new Promise(done => setTimeout(done, startPollDelay * 1000));
 
