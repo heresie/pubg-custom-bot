@@ -83,8 +83,8 @@ function startPoll(voteChannel, questionObj, recapChoices = []) {
     question.nb_answers = questionObj.answers.length;
 
     for (let i = 0; i < question.nb_answers; i++) {
-        question.messages.question += `${emojiCharacters[i]} \`${questionObj.answers[i].title}\`\n`;
-        question.allowed_emojis.push(emojiCharacters[i]);
+        question.messages.question += `${emojiCharacters[i + 1]} \`${questionObj.answers[i].title}\`\n`;
+        question.allowed_emojis.push(emojiCharacters[i + 1]);
     }
 
     // let's go
@@ -98,7 +98,7 @@ function startPoll(voteChannel, questionObj, recapChoices = []) {
 
                 // post all the reactions
                 for (let i = 0; i < question.nb_answers; i++) {
-                    await question.objs.q.react(emojiCharacters[i]);
+                    await question.objs.q.react(emojiCharacters[i + 1]);
                 }
 
                 // record reactions posted to the message and filter them to exclude non-allowed symbols & the bot self-posted reactions
