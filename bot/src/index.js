@@ -2,6 +2,7 @@
 const Discord = require('discord.js');
 const auth = require('../credentials/auth.json');
 const pollQuestions = require('../polls/customGames.json');
+const rematchQuestions = require('../polls/rematchGames.json');
 const emojiCharacters = require('./emojiCharacters');
 
 // init
@@ -29,6 +30,7 @@ const startPollDelay = 5;
 let question = {}
 let voteInProgress = false;
 let pubgEmoji = null;
+let lastParamsStr = "";
 
 // debug tool
 function dumpError(err) {
@@ -197,9 +199,9 @@ function startPoll(voteChannel, questionObj, recapChoices = []) {
                         // end of poll
                         voteInProgress = false;
 
-                        let r = recapChoices.join(', ');
-
-                        voteChannel.send(`:white_check_mark: Prochaine partie : \`${r}\`.`);
+                        lastParamsStr = recapChoices.join(', ');
+                        
+                        voteChannel.send(`:white_check_mark: Prochaine partie : \`${lastParamsStr}\`.`);
                         voteChannel.send(`${pubgEmoji} reste un jeu, ne l'oubliez pas 🐔🍳`);
 
                     }
@@ -255,6 +257,35 @@ client.on('message', async message => {
                 await new Promise(done => setTimeout(done, startPollDelay * 1000));
 
                 startPoll(voteChannel, pollQuestions.poll);
+
+            } else {
+
+                message.author.send(`Un Custom vote est déjà en cours, attends qu'il soit fini pour lancer le suivant.`);
+
+            }
+
+        }
+
+    }
+
+    if (message == '!rematch' && !voteInProgress && lastParamsStr != "") {
+
+        // react only to admins
+        if (!message.member.roles.find(r => r.name === adminRoleName)) {
+
+            message.author.send(`Vous ne disposez pas du rôle ${adminRoleName} pour démarrer un vote.`);
+
+        } else {
+
+            if (!voteInProgress) {
+
+                voteChannel.send(`**Démarrage d'un nouveau sondage dans 3 secondes. Délai de vote : ${maxResponseDelay} secondes.**`)
+                voteChannel.send(`${emojiCharacters['!']} **__Attention :__** Les votes réalisés avant l'apparition de toutes les propositions ne seront pas comptabilisés.`)
+                voteChannel.send(`Derniers paramètres : \`${lastParamsStr}\``)
+                
+                await new Promise(done => setTimeout(done, startPollDelay * 1000));
+
+                startPoll(voteChannel, rematchQuestions.poll);
 
             } else {
 

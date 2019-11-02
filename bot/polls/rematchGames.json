@@ -1,0 +1,21 @@
+{
+    "author": "Hérésie",
+    "creationDate": "02-11-2019",
+    "version": "1.0",
+    "poll": {
+        "answers": [
+            {
+                "title": "Rematch! Mêmes paramètres et équipes",
+                "answers": []
+            },
+            {
+                "title": "Rematch! Mêmes paramètres et mélange des équipes",
+                "answers": []
+            },
+            {
+                "title": "Pas de rematch",
+                "answers": []
+            }
+       ]
+    }
+}
