@@ -273,7 +273,7 @@ client.on('message', async message => {
     ]
 
     // crawl authorized commands
-    for (allowedCommand in allowedCommands) {
+    allowedCommands.forEach(allowedCommand => {
 
         console.log(`Checking if ${message.content} starts with ${allowedCommand.command}`)
 
@@ -286,7 +286,7 @@ client.on('message', async message => {
     
         }
 
-    }
+    })
 
     // react only to admins
     if (!message.member.roles.find(r => r.name === adminRoleName)) {
