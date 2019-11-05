@@ -26,6 +26,10 @@ const maxResponseDelay = 35;
 const betweenQuestionsDelay = 3;
 const startPollDelay = 5;
 
+// countdown timers
+const defaultCountdownLimit = 120;
+const countdownStep = 30;
+
 // the structure of this object is stored in the initQuestionObject method
 let question = {}
 let voteInProgress = false;
@@ -249,20 +253,12 @@ client.on('message', async message => {
 
         } else {
 
-            if (!voteInProgress) {
+            voteChannel.send(`**Démarrage d'un nouveau sondage dans 3 secondes. Délai de vote : ${maxResponseDelay} secondes.**`)
+            voteChannel.send(`${emojiCharacters['!']} **__Attention :__** Les votes réalisés avant l'apparition de toutes les propositions ne seront pas comptabilisés.`)
 
-                voteChannel.send(`**Démarrage d'un nouveau sondage dans 3 secondes. Délai de vote : ${maxResponseDelay} secondes.**`)
-                voteChannel.send(`${emojiCharacters['!']} **__Attention :__** Les votes réalisés avant l'apparition de toutes les propositions ne seront pas comptabilisés.`)
+            await new Promise(done => setTimeout(done, startPollDelay * 1000));
 
-                await new Promise(done => setTimeout(done, startPollDelay * 1000));
-
-                startPoll(voteChannel, pollQuestions.poll);
-
-            } else {
-
-                message.author.send(`Un Custom vote est déjà en cours, attends qu'il soit fini pour lancer le suivant.`);
-
-            }
+            startPoll(voteChannel, pollQuestions.poll);
 
         }
 
@@ -277,25 +273,62 @@ client.on('message', async message => {
 
         } else {
 
-            if (!voteInProgress) {
+            voteChannel.send(`**Démarrage d'un nouveau sondage dans 3 secondes. Délai de vote : ${maxResponseDelay} secondes.**`)
+            voteChannel.send(`${emojiCharacters['!']} **__Attention :__** Les votes réalisés avant l'apparition de toutes les propositions ne seront pas comptabilisés.`)
+            voteChannel.send(`Derniers paramètres : \`${lastParamsStr}\``)
+            
+            await new Promise(done => setTimeout(done, startPollDelay * 1000));
 
-                voteChannel.send(`**Démarrage d'un nouveau sondage dans 3 secondes. Délai de vote : ${maxResponseDelay} secondes.**`)
-                voteChannel.send(`${emojiCharacters['!']} **__Attention :__** Les votes réalisés avant l'apparition de toutes les propositions ne seront pas comptabilisés.`)
-                voteChannel.send(`Derniers paramètres : \`${lastParamsStr}\``)
-                
-                await new Promise(done => setTimeout(done, startPollDelay * 1000));
-
-                startPoll(voteChannel, rematchQuestions.poll);
-
-            } else {
-
-                message.author.send(`Un Custom vote est déjà en cours, attends qu'il soit fini pour lancer le suivant.`);
-
-            }
+            startPoll(voteChannel, rematchQuestions.poll);
 
         }
 
     }
+
+    let prefix = '!timer'
+
+    if (message.content.startsWith(prefix) && !message.author.bot && !voteInProgress) {
+
+        const args = message.content.slice(prefix.length).split(' ');
+        const command = args.shift().toLowerCase();
+
+        // react only to admins
+        if (!message.member.roles.find(r => r.name === adminRoleName)) {
+
+            message.author.send(`Vous ne disposez pas du rôle ${adminRoleName} pour démarrer un timer.`)
+
+        } else {
+
+            let remainingSeconds = Number(args[0]) > 0 ? Number(args[0]) : defaultCountdownLimit
+
+            voteChannel.send(`:information_source: La partie a été créée : trouvez \`perso\` dans le menu \`Parties personnalisées\` de ${pubgEmoji}\n**:alarm_clock: Vous disposez de ${remainingSeconds} secondes pour rejoindre celle-ci avant le démarrage.**`)
+
+            let iteration = 0
+
+            while (remainingSeconds > 0) {
+
+                if (iteration > 0) {
+                
+                    voteChannel.send(`:arrow_right: Il reste ${remainingSeconds} secondes avant le démarrage de la partie ...`)
+
+                }
+
+                let waitTime = remainingSeconds < countdownStep ? 
+                    remainingSeconds : countdownStep
+
+                await new Promise(done => setTimeout(done, waitTime * 1000));
+
+                remainingSeconds -= countdownStep
+
+                iteration++;
+            }
+
+            voteChannel.send(`:loudspeaker: Démarrage de la partie ...`)
+
+        }
+
+    }
+
 
 });
 
