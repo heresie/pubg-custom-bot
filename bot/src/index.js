@@ -243,6 +243,10 @@ client.on('ready', () => {
 
 client.on('message', async message => {
 
+    // default values
+    let args = []
+    let command = ''
+
     // need to find the emoji from the guild that is attached to the message
     pubgEmoji = message.guild.emojis.find(emoji => emoji.name === "pubg");
 
@@ -273,15 +277,15 @@ client.on('message', async message => {
 
         if (message.content.startsWith(allowedCommand.command) && !message.author.bot) {
 
-            const args = message.content.slice(allowedCommand.command.length).split(' ');
-            const command = args.shift().toLowerCase();
+            args = message.content.slice(allowedCommand.command.length).split(' ');
+            command = args.shift().toLowerCase();
     
         }
 
     }
 
     // if command unknown
-    if (command === undefined) {
+    if (command == '') {
         return;
     }
 
