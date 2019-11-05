@@ -36,6 +36,28 @@ let voteInProgress = false;
 let pubgEmoji = null;
 let lastParamsStr = "";
 let voteChannel = null;
+let allowedCommands = [
+    {
+        name: "Liste des commandes disponibles",
+        command: '!help',
+        helper: '!help'
+    },
+    {
+        name: "Démarrage d'un vote de match Custom",
+        command: '!vote',
+        helper: '!vote'
+    },
+    {
+        name: "Démarrage d'un vote de rematch",
+        command: '!rematch',
+        helper: '!rematch',
+    },
+    {
+        name: "Démarrage d'un timer avant le démarrage d'une partie",
+        command: '!timer',
+        helper: '!timer {optionnel: nombre de secondes du décompte}',
+    }
+];
 
 // debug tool
 function dumpError(err) {
@@ -260,41 +282,13 @@ client.on('message', async message => {
     let args = []
     let command = ''
 
-    // need to find the emoji from the guild that is attached to the message
-    pubgEmoji = message.guild.emojis.find(emoji => emoji.name === "pubg")
-
-    let allowedCommands = [
-        {
-            name: "Besoin d'aide",
-            command: '!help',
-            helper: 'Permet de voir les commandes disponibles'
-        },
-        {
-            name: "Démarrage d'un vote de match Custom",
-            command: '!vote',
-        },
-        {
-            name: "Démarrage d'un vote de rematch",
-            command: '!rematch',
-            helper: '!rematch',
-        },
-        {
-            name: "Démarrage d'un timer avant le démarrage d'une partie",
-            command: '!timer',
-            helper: '!timer {optionnel: nombre de secondes du décompte}',
-        }
-    ]
-
     // crawl authorized commands
     allowedCommands.forEach(allowedCommand => {
-
         console.log(`Checking if ${message.content} starts with ${allowedCommand.command}`)
-
         if (message.content.startsWith(allowedCommand.command)) {
             args = message.content.slice(allowedCommand.command.length + 1).split(' ') // the +1 is for the space after the command
             command = allowedCommand.command
         }
-
     })
 
     // if command unknown
@@ -302,11 +296,16 @@ client.on('message', async message => {
         console.log(`[COMMAND NOT FOUND] ${message.content}`)
         return
     }
-
+  
     console.log(`[STARTING COMMAND] ${message.member.name} started command "${message.content}"`)
+
+    // need to find the emoji from the guild that is attached to the message
+    pubgEmoji = message.guild.emojis.find(emoji => emoji.name === "pubg")
 
     // do the action
     switch (command) {
+
+        // !vote
         case '!vote':
 
             // no concurrent votes
@@ -330,10 +329,14 @@ client.on('message', async message => {
 
             break;
 
+        // !rematch
         case '!rematch':
 
             // no concurrent votes & needs some last parameters to vote for
             if (!voteInProgress && lastParamsStr != '') {
+
+                // reset recapChoices
+                recapChoices = [];
 
                 voteChannel.send(`**Démarrage d'un nouveau sondage dans 3 secondes. Délai de vote : ${maxResponseDelay} secondes.**`)
                 voteChannel.send(`${emojiCharacters['!']} **__Attention :__** Les votes réalisés avant l'apparition de toutes les propositions ne seront pas comptabilisés.`)
@@ -355,6 +358,7 @@ client.on('message', async message => {
 
             break;
 
+        // !timer
         case '!timer':
 
             // no concurrent votes
@@ -393,12 +397,13 @@ client.on('message', async message => {
                 
             }
 
-        break;
-        
+            break;
+    
+        // !help
         case '!help':
 
             allowedCommands.forEach(allowedCommand => {
-                message.author.send(`${allowedCommand.command} : ${allowedCommand.helper}`);
+                message.author.send(`${allowedCommand.helper} : ${allowedCommand.name}`);
             })
 
             break;
