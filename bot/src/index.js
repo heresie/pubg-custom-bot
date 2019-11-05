@@ -243,6 +243,16 @@ client.on('ready', () => {
 
 client.on('message', async message => {
 
+    // react only to admins
+    if (!message.member.roles.find(r => r.name === adminRoleName)) {
+
+        console.log(`[ACCESS DENIED] ${message.member.name} tried to start command "${message.content}"`)
+
+        message.author.send(`Vous ne disposez pas du rôle ${adminRoleName} pour utiliser le bot.\nCette tentative a été enregistrée et signalée à un admin.`);
+
+        return;
+    }
+
     // default values
     let args = []
     let command = ''
@@ -283,16 +293,11 @@ client.on('message', async message => {
 
             args = message.content.slice(allowedCommand.command.length).split(' ')
             command = args.shift().toLowerCase()
-    
+    console.log(args)
+    console.log(command)
         }
 
     })
-
-    // react only to admins
-    if (!message.member.roles.find(r => r.name === adminRoleName)) {
-        console.log(`[ACCESS DENIED] ${message.member.name} tried to start command "${message.content}"`)
-        message.author.send(`Vous ne disposez pas du rôle ${adminRoleName} pour utiliser le bot.\nCette tentative a été enregistrée et signalée à un admin.`);
-    }
 
     // if command unknown
     if (command == '') {
