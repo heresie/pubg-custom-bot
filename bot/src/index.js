@@ -292,7 +292,7 @@ client.on('message', async message => {
             console.log('YES')
 
             args = message.content.slice(allowedCommand.command.length).split(' ')
-            command = args.shift().toLowerCase()
+            command = allowedCommand.command
     console.log(args)
     console.log(command)
         }
