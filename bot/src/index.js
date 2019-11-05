@@ -394,6 +394,14 @@ client.on('message', async message => {
             }
 
         break;
+        
+        case '!help':
+
+            allowedCommands.forEach(allowedCommand => {
+                message.author.send(`${allowedCommand.command} : ${allowedCommand.helper}`);
+            })
+
+            break;
 
     }
 
