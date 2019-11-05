@@ -243,13 +243,16 @@ client.on('ready', () => {
 
 client.on('message', async message => {
 
+    // don't react to bots
+    if (message.author.bot) {
+        console.log(`[IGNORE] ${message.content}`)
+        return;
+    }
+
     // react only to admins
     if (!message.member.roles.find(r => r.name === adminRoleName)) {
-
         console.log(`[ACCESS DENIED] ${message.member.name} tried to start command "${message.content}"`)
-
         message.author.send(`Vous ne disposez pas du rôle ${adminRoleName} pour utiliser le bot.\nCette tentative a été enregistrée et signalée à un admin.`);
-
         return;
     }
 
@@ -287,14 +290,9 @@ client.on('message', async message => {
 
         console.log(`Checking if ${message.content} starts with ${allowedCommand.command}`)
 
-        if (message.content.startsWith(allowedCommand.command) && !message.author.bot) {
-
-            console.log('YES')
-
-            args = message.content.slice(allowedCommand.command.length).split(' ')
+        if (message.content.startsWith(allowedCommand.command)) {
+            args = message.content.slice(allowedCommand.command.length + 1).split(' ') // the +1 is for the space after the command
             command = allowedCommand.command
-    console.log(args)
-    console.log(command)
         }
 
     })
