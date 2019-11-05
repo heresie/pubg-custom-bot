@@ -237,12 +237,13 @@ client.on('ready', () => {
     })
 
     // init some things
-    pubgEmoji = message.guild.emojis.find(emoji => emoji.name === "pubg");
     voteChannel = client.channels.find(channel => channel.name === pollChannelName);
 
 });
 
 client.on('message', async message => {
+
+    pubgEmoji = message.guild.emojis.find(emoji => emoji.name === "pubg");
 
     let allowedCommands = [
         {
