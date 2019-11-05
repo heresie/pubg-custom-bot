@@ -35,6 +35,7 @@ let question = {}
 let voteInProgress = false;
 let pubgEmoji = null;
 let lastParamsStr = "";
+let voteChannel = null;
 
 // debug tool
 function dumpError(err) {
@@ -235,100 +236,145 @@ client.on('ready', () => {
         }
     })
 
+    // init some things
+    pubgEmoji = message.guild.emojis.find(emoji => emoji.name === "pubg");
+    voteChannel = client.channels.find(channel => channel.name === pollChannelName);
+
 });
 
 client.on('message', async message => {
 
-    recapChoices = [];
-    let voteChannel = client.channels.find(channel => channel.name === pollChannelName);
-    pubgEmoji = message.guild.emojis.find(emoji => emoji.name === "pubg");
+    let allowedCommands = [
+        {
+            name: "Démarrage d'un vote de match Custom",
+            command: '!vote',
+        },
+        {
+            name: "Démarrage d'un vote de rematch",
+            command: '!rematch',
+            helper: '!rematch',
+        },
+        {
+            name: "Démarrage d'un timer avant le démarrage d'une partie",
+            command: '!timer',
+            helper: '!timer {optionnel: nombre de secondes du décompte}',
+            args: true
+        }
+    ]
 
-    // react only on !vote messages
-    if (message == '!vote' && !voteInProgress) {
+    // crawl authorized commands
+    for (allowedCommand in allowedCommands) {
 
-        // react only to admins
-        if (!message.member.roles.find(r => r.name === adminRoleName)) {
+        if (message.content.startsWith(allowedCommand.command) && !message.author.bot) {
 
-            message.author.send(`Vous ne disposez pas du rôle ${adminRoleName} pour démarrer un vote.`);
-
-        } else {
-
-            voteChannel.send(`**Démarrage d'un nouveau sondage dans 3 secondes. Délai de vote : ${maxResponseDelay} secondes.**`)
-            voteChannel.send(`${emojiCharacters['!']} **__Attention :__** Les votes réalisés avant l'apparition de toutes les propositions ne seront pas comptabilisés.`)
-
-            await new Promise(done => setTimeout(done, startPollDelay * 1000));
-
-            startPoll(voteChannel, pollQuestions.poll);
-
+            const args = message.content.slice(allowedCommand.command.length).split(' ');
+            const command = args.shift().toLowerCase();
+    
         }
 
     }
 
-    if (message == '!rematch' && !voteInProgress && lastParamsStr != "") {
-
-        // react only to admins
-        if (!message.member.roles.find(r => r.name === adminRoleName)) {
-
-            message.author.send(`Vous ne disposez pas du rôle ${adminRoleName} pour démarrer un vote.`);
-
-        } else {
-
-            voteChannel.send(`**Démarrage d'un nouveau sondage dans 3 secondes. Délai de vote : ${maxResponseDelay} secondes.**`)
-            voteChannel.send(`${emojiCharacters['!']} **__Attention :__** Les votes réalisés avant l'apparition de toutes les propositions ne seront pas comptabilisés.`)
-            voteChannel.send(`Derniers paramètres : \`${lastParamsStr}\``)
-            
-            await new Promise(done => setTimeout(done, startPollDelay * 1000));
-
-            startPoll(voteChannel, rematchQuestions.poll);
-
-        }
-
+    // if command unknown
+    if (isNaN(command)) {
+        return;
     }
 
-    let prefix = '!timer'
+    // react only to admins
+    if (!message.member.roles.find(r => r.name === adminRoleName)) {
+        message.author.send(`Vous ne disposez pas du rôle ${adminRoleName} pour utiliser le bot.`);
+    }
 
-    if (message.content.startsWith(prefix) && !message.author.bot && !voteInProgress) {
+    // do the action
+    switch (command) {
+        case '!vote':
 
-        const args = message.content.slice(prefix.length).split(' ');
-        const command = args.shift().toLowerCase();
+            // no concurrent votes
+            if (!voteInProgress) {
 
-        // react only to admins
-        if (!message.member.roles.find(r => r.name === adminRoleName)) {
+                // reset recapChoices
+                recapChoices = [];
 
-            message.author.send(`Vous ne disposez pas du rôle ${adminRoleName} pour démarrer un timer.`)
+                voteChannel.send(`**Démarrage d'un nouveau sondage dans 3 secondes. Délai de vote : ${maxResponseDelay} secondes.**`)
+                voteChannel.send(`${emojiCharacters['!']} **__Attention :__** Les votes réalisés avant l'apparition de toutes les propositions ne seront pas comptabilisés.`)
+    
+                await new Promise(done => setTimeout(done, startPollDelay * 1000));
+    
+                startPoll(voteChannel, pollQuestions.poll);
 
-        } else {
+            } else {
 
-            let remainingSeconds = Number(args[0]) > 0 ? Number(args[0]) : defaultCountdownLimit
-
-            voteChannel.send(`:information_source: La partie a été créée : trouvez \`perso\` dans le menu \`Parties personnalisées\` de ${pubgEmoji}\n**:alarm_clock: Vous disposez de ${remainingSeconds} secondes pour rejoindre celle-ci avant le démarrage.**`)
-
-            let iteration = 0
-
-            while (remainingSeconds > 0) {
-
-                if (iteration > 0) {
+                message.author.send(`Un vote est déjà en cours. Attendez sa fin ou tapez !stop`);
                 
-                    voteChannel.send(`:arrow_right: Il reste ${remainingSeconds} secondes avant le démarrage de la partie ...`)
-
-                }
-
-                let waitTime = remainingSeconds < countdownStep ? 
-                    remainingSeconds : countdownStep
-
-                await new Promise(done => setTimeout(done, waitTime * 1000));
-
-                remainingSeconds -= countdownStep
-
-                iteration++;
             }
 
-            voteChannel.send(`:loudspeaker: Démarrage de la partie ...`)
+            break;
 
-        }
+        case '!rematch':
+
+            // no concurrent votes & needs some last parameters to vote for
+            if (!voteInProgress && lastParamsStr != '') {
+
+                voteChannel.send(`**Démarrage d'un nouveau sondage dans 3 secondes. Délai de vote : ${maxResponseDelay} secondes.**`)
+                voteChannel.send(`${emojiCharacters['!']} **__Attention :__** Les votes réalisés avant l'apparition de toutes les propositions ne seront pas comptabilisés.`)
+                voteChannel.send(`Derniers paramètres : \`${lastParamsStr}\``)
+                
+                await new Promise(done => setTimeout(done, startPollDelay * 1000));
+    
+                startPoll(voteChannel, rematchQuestions.poll);
+
+            } else if (lastParamsStr == '') {
+
+                message.author.send(`Impossible de rematch sans disposer des paramètres de la précédente partie.`);
+
+            } else {
+
+                message.author.send(`Un vote est déjà en cours. Attendez sa fin ou tapez !stop`);
+
+            }
+
+            break;
+
+        case '!timer':
+
+            // no concurrent votes
+            if (!voteInProgress) {
+
+                let remainingSeconds = Number(args[0]) > 0 ? Number(args[0]) : defaultCountdownLimit
+
+                voteChannel.send(`:information_source: La partie a été créée : trouvez \`perso\` dans le menu \`Parties personnalisées\` de ${pubgEmoji}\n**:alarm_clock: Vous disposez de ${remainingSeconds} secondes pour rejoindre celle-ci avant le démarrage.**`)
+    
+                let iteration = 0
+    
+                while (remainingSeconds > 0) {
+    
+                    if (iteration > 0) {
+                    
+                        voteChannel.send(`:arrow_right: Il reste ${remainingSeconds} secondes avant le démarrage de la partie ...`)
+    
+                    }
+    
+                    let waitTime = remainingSeconds < countdownStep ? 
+                        remainingSeconds : countdownStep
+    
+                    await new Promise(done => setTimeout(done, waitTime * 1000));
+    
+                    remainingSeconds -= countdownStep
+    
+                    iteration++;
+                }
+    
+                voteChannel.send(`:loudspeaker: Démarrage de la partie ...`)
+    
+
+            } else {
+
+                message.author.send(`Un vote est déjà en cours. Attendez sa fin ou tapez !stop`);
+                
+            }
+
+        break;
 
     }
-
 
 });
 
