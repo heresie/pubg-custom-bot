@@ -243,9 +243,15 @@ client.on('ready', () => {
 
 client.on('message', async message => {
 
+    // need to find the emoji from the guild that is attached to the message
     pubgEmoji = message.guild.emojis.find(emoji => emoji.name === "pubg");
 
     let allowedCommands = [
+        {
+            name: "Besoin d'aide",
+            command: '!help',
+            helper: 'Permet de voir les commandes disponibles'
+        },
         {
             name: "Démarrage d'un vote de match Custom",
             command: '!vote',
@@ -259,7 +265,6 @@ client.on('message', async message => {
             name: "Démarrage d'un timer avant le démarrage d'une partie",
             command: '!timer',
             helper: '!timer {optionnel: nombre de secondes du décompte}',
-            args: true
         }
     ]
 
@@ -276,7 +281,7 @@ client.on('message', async message => {
     }
 
     // if command unknown
-    if (typeof(command) == "undefined") {
+    if (command === undefined) {
         return;
     }
 
