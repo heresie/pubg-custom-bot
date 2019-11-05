@@ -276,7 +276,7 @@ client.on('message', async message => {
     }
 
     // if command unknown
-    if (isNaN(command)) {
+    if (typeof(command) == "undefined") {
         return;
     }
 
