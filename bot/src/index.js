@@ -248,7 +248,7 @@ client.on('message', async message => {
     let command = ''
 
     // need to find the emoji from the guild that is attached to the message
-    pubgEmoji = message.guild.emojis.find(emoji => emoji.name === "pubg");
+    pubgEmoji = message.guild.emojis.find(emoji => emoji.name === "pubg")
 
     let allowedCommands = [
         {
@@ -275,24 +275,32 @@ client.on('message', async message => {
     // crawl authorized commands
     for (allowedCommand in allowedCommands) {
 
+        console.log(`Checking if ${message.content} starts with ${allowedCommand.command}`)
+
         if (message.content.startsWith(allowedCommand.command) && !message.author.bot) {
 
-            args = message.content.slice(allowedCommand.command.length).split(' ');
-            command = args.shift().toLowerCase();
+            console.log('YES')
+
+            args = message.content.slice(allowedCommand.command.length).split(' ')
+            command = args.shift().toLowerCase()
     
         }
 
     }
 
-    // if command unknown
-    if (command == '') {
-        return;
-    }
-
     // react only to admins
     if (!message.member.roles.find(r => r.name === adminRoleName)) {
-        message.author.send(`Vous ne disposez pas du rôle ${adminRoleName} pour utiliser le bot.`);
+        console.log(`[ACCESS DENIED] ${message.member.name} tried to start command "${message.content}"`)
+        message.author.send(`Vous ne disposez pas du rôle ${adminRoleName} pour utiliser le bot.\nCette tentative a été enregistrée et signalée à un admin.`);
     }
+
+    // if command unknown
+    if (command == '') {
+        console.log(`[COMMAND NOT FOUND] ${message.content}`)
+        return
+    }
+
+    console.log(`[STARTING COMMAND] ${message.member.name} started command "${message.content}"`)
 
     // do the action
     switch (command) {
