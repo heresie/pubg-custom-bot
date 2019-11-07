@@ -3080,7 +3080,12 @@
                         ]
                     }
                 ]
-            }            
+            },
+            {
+                "title": "Partie Rapide : Aléatoire",
+                "answers": [],
+                "function": "randomVote"
+            }
         ]
     }
 }
