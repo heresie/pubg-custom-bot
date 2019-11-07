@@ -1,3 +1,7 @@
+# 1.3
+
+ - NEW: CI/CD Pipeline
+
 # 1.2
 
  - NEW: Change output format and using Embeds
