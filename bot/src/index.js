@@ -43,8 +43,8 @@ let vocalChannel = null;
 let allowedCommands = [
     {
         name: "Liste des commandes disponibles",
-        command: '!help',
-        helper: '!help'
+        command: '!aide',
+        helper: '!aide'
     },
     {
         name: "Démarrage d'un vote de match Custom",
@@ -89,6 +89,56 @@ function dumpError(err) {
 
 }
 
+// randomize array
+function arrayShuffle(array) {
+
+    var currentIndex = array.length, temporaryValue, randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+}
+
+// prepare Embed object
+function newEmbed(type) {
+
+    let richEmbed = new Discord.RichEmbed()
+                       .setColor('#0099ff')
+
+    switch (type) {
+
+       case 'simple':
+           break;
+
+       case 'vote':
+           richEmbed
+               .setThumbnail('http://pngimg.com/uploads/pubg/pubg_PNG5.png')
+               .setFooter(`⚠️ Les votes réalisés avant l'apparition de toutes les propositions ne seront pas comptabilisés....... ⏰ Vous disposez de ${maxResponseDelay} secondes pour réagir à la question.`, '')
+           break;
+
+       case 'medium':
+           richEmbed
+               .setThumbnail('http://pngimg.com/uploads/pubg/pubg_PNG5.png')
+           break;
+
+       default:
+           break;
+    }
+
+    return richEmbed;
+}
+
 // reset global question object
 function initQuestionObject() {
     question = {
@@ -117,6 +167,8 @@ function startPoll(voteChannel, questionObj, recapChoices = [], random = false) 
     // reset / empty the question object
     initQuestionObject();
 
+    let qStr = ''
+
     // get the allowed reactions
     for (let i = 0; i < questionObj.answers.length; i++) {
         // A CAUSE DE LA FACON DONT NOUS TRAITONS LES RANDOMIZERS, LES OPTIONS DOIVENT TOUJOURS ETRE LES DERNIERES PROPOSEES DANS LE FICHIER JSON
@@ -126,7 +178,7 @@ function startPoll(voteChannel, questionObj, recapChoices = [], random = false) 
         } else {
             // store the text for printing the options only if we are not in random mode
 	    if (!random) {
-                question.messages.question += `${emojiCharacters[i + 1]} \`${questionObj.answers[i].title}\`\n`;
+                qStr += `${emojiCharacters[i + 1]} \`${questionObj.answers[i].title}\`\n`
             }
 
             question.allowed_emojis.push(emojiCharacters[i + 1]);
@@ -135,7 +187,11 @@ function startPoll(voteChannel, questionObj, recapChoices = [], random = false) 
 
     // define text if random
     if (random) {
-        question.messages.question = "🎲 Tirage au sort ..."
+        question.messages.question = newEmbed('simple')
+            .setDescription(`🎲 Tirage au sort ...`)
+    } else {
+        question.messages.question = newEmbed('vote')
+            .setDescription(qStr)
     }
 
     question.nb_answers = question.allowed_emojis.length;
@@ -243,12 +299,10 @@ function startPoll(voteChannel, questionObj, recapChoices = [], random = false) 
                 let randomStr = (question.randomized || random) ? 'a été tiré au sort' : 'a remporté les suffrages';
 
                 question.messages.response = (question.success) ? 
-                    `\`${question.winner.answer}\` ${randomStr} (${question.winner.score} vote${plural})` :
-                    `Aucun vote enregistré. Arrêt du sondage.`;
+                    `> \`${question.winner.answer}\` ${randomStr} (${question.winner.score} vote${plural})` :
+                    `> Aucun vote enregistré. Arrêt du sondage.`;
 
                 await voteChannel.send(question.messages.response);
-
-                console.log(question);
 
                 // why will a random bot wait for ?
                 if (!random) {
@@ -277,8 +331,7 @@ function startPoll(voteChannel, questionObj, recapChoices = [], random = false) 
 
                             lastParamsStr = recapChoices.join(', ');
                             
-                            voteChannel.send(`:white_check_mark: Prochaine partie : \`${lastParamsStr}\`.`);
-                            voteChannel.send(`${pubgEmoji} reste un jeu, ne l'oubliez pas 🐔🍳`);
+                            voteChannel.send(`>>> :white_check_mark: Prochaine partie : \`${lastParamsStr}\`.\n${pubgEmoji} reste un jeu, ne l'oubliez pas 🐔🍳`);
 
                             // end of poll
                             voteInProgress = false;
@@ -322,7 +375,7 @@ function isAllowedCommand(message) {
 
 client.on('ready', () => {
 
-    console.log(`Logged in as ${client.user.tag}!`);
+    console.log(`INFO | Logged in as ${client.user.tag}!`);
 
     client.user.setPresence({
         game: {
@@ -368,8 +421,7 @@ client.on('message', async message => {
                 // reset recapChoices
                 recapChoices = [];
 
-                voteChannel.send(`**Démarrage d'un nouveau sondage dans ${startPollDelay} secondes. Délai de vote : ${maxResponseDelay} secondes.**`)
-                voteChannel.send(`${emojiCharacters['!']} **__Attention :__** Les votes réalisés avant l'apparition de toutes les propositions ne seront pas comptabilisés.`)
+                voteChannel.send(`> Démarrage d'un nouveau sondage dans **${startPollDelay} secondes** ...`)
     
                 await new Promise(done => setTimeout(done, startPollDelay * 1000));
     
@@ -392,9 +444,7 @@ client.on('message', async message => {
                 // reset recapChoices
                 recapChoices = [];
 
-                voteChannel.send(`**Démarrage d'un nouveau sondage dans ${startPollDelay} secondes. Délai de vote : ${maxResponseDelay} secondes.**`)
-                voteChannel.send(`${emojiCharacters['!']} **__Attention :__** Les votes réalisés avant l'apparition de toutes les propositions ne seront pas comptabilisés.`)
-                voteChannel.send(`Derniers paramètres : \`${lastParamsStr}\``)
+                voteChannel.send(`>>> Démarrage d'un nouveau sondage dans **${startPollDelay} secondes** ...\nDerniers paramètres : \`${lastParamsStr}\``)
                 
                 await new Promise(done => setTimeout(done, startPollDelay * 1000));
     
@@ -420,7 +470,12 @@ client.on('message', async message => {
 
                 let remainingSeconds = Number(commandScan.args[0]) > 0 ? Number(commandScan.args[0]) : defaultCountdownLimit
 
-                voteChannel.send(`:information_source: La partie a été créée : trouvez \`perso\` dans le menu \`Parties personnalisées\` de ${pubgEmoji}\n**:alarm_clock: Vous disposez de ${remainingSeconds} secondes pour rejoindre celle-ci avant le démarrage.**`)
+		let startMessage = newEmbed('medium')
+                                       .setTitle(`PARTIE CRÉÉE !`)
+                                       .setDescription(`${emojiCharacters[1]} Rendez-vous dans le menu \`Parties personnalisées\` de ${pubgEmoji}\n${emojiCharacters[2]} Sélectionnez n'importe quel type de partie\n${emojiCharacters[3]} Cherchez le terme \`perso\`\n${emojiCharacters[4]} Rejoignez la partie avec le mot de passe : \`yo\``)
+                                       .setFooter(`⏰ Vous disposez de ${remainingSeconds} secondes pour rejoindre la partie avant son démarrage.`)
+
+                voteChannel.send(startMessage)
     
                 let iteration = 0
     
@@ -428,7 +483,7 @@ client.on('message', async message => {
     
                     if (iteration > 0) {
                     
-                        voteChannel.send(`:arrow_right: Il reste ${remainingSeconds} secondes avant le démarrage de la partie ...`)
+                        voteChannel.send(newEmbed('simple').setDescription(`:arrow_right: Il reste **${remainingSeconds} secondes** avant le démarrage de la partie ...`))
     
                     }
     
@@ -442,7 +497,7 @@ client.on('message', async message => {
                     iteration++;
                 }
     
-                voteChannel.send(`:loudspeaker: Démarrage de la partie ...`)
+                voteChannel.send(`>>> :loudspeaker: Démarrage de la partie ...\n${pubgEmoji} reste un jeu, ne l'oubliez pas 🐔🍳`);
     
 
             } else {
@@ -453,16 +508,20 @@ client.on('message', async message => {
 
             break;
     
-        // !help
-        case '!help':
+        // !aide
+        case '!aide':
+
+            let helpMessage = ''
 
             // for each globally configured commands
             allowedCommands.forEach(allowedCommand => {
 
-                // send a private message to the author of the command with the command helper
-                message.author.send(`${allowedCommand.helper} : ${allowedCommand.name}`);
+                helpMessage += `${allowedCommand.helper}\t${allowedCommand.name}\n`
 
             })
+
+            // send a private message to the author of the command with the command helper
+            message.author.send(`\`\`\`\n${helpMessage}\`\`\``);
 
             break;
 
@@ -473,7 +532,7 @@ client.on('message', async message => {
             if (!voteInProgress) {
 
                 // get the members currently in the vocal channel
-                let currentMembers = vocalChannel.members
+                let currentMembers = []
 
                 // get the max number of teams
                 let nbTeams = Number(commandScan.args[0]) > 0 ? Number(commandScan.args[0]) : defaultTeamLimit
@@ -485,43 +544,36 @@ client.on('message', async message => {
                 let currentTeam = 1
 
                 // if nobody's in the vocal channel ...
-                if (currentMembers.size == 0) {
-                    voteChannel.send(`Aucune personne connectée au channel vocal \`${vocalChannelName}\`. Arrêt du random.`)
+                if (vocalChannel.members.size == 0) {
+                    voteChannel.send(`> Aucune personne connectée au channel vocal \`${vocalChannelName}\` ...`)
                     return
                 }
 
-                console.log('CMD  | Participants : ' + currentMembers.size)
-                console.log(currentMembers)
-                
+		for (let member of vocalChannel.members.values()) {
+                    currentMembers.push(member.displayName)
+                }
+
+                // shuffle more the list of current members for more random
+                arrayShuffle(currentMembers)
+
+                console.log('CMD  | !teams | Lottery pool : ', currentMembers)
+
                 // announce the randomizer
-                voteChannel.send(`**Création des équipes aléatoires dans ${startRandomizerDelay} secondes.**`)
-                voteChannel.send(`Connectez vous au channel vocal \`${vocalChannelName}\` pour participer au tirage au sort.`)
+                voteChannel.send(`>>> Création des équipes aléatoires dans **${startRandomizerDelay} secondes** ...\nConnectez-vous au channel vocal \`${vocalChannelName}\` pour participer au tirage des équipes.`)
 
                 // wait some time
                 await new Promise(done => setTimeout(done, startRandomizerDelay * 1000));
 
                 // while we have someone in the lottery pool ...
-                while (currentMembers.size > 0) {
+                while (currentMembers.length > 0) {
 
                     // let's do some random
-                    let electedMemberRndIndex = Math.floor(Math.random() * currentMembers.size)
-
-                    // we randomized the number of the player, but we still need to find the index in the map object
-                    let electedMemberMapIndex = null;
-
-                    // search that randomized index of the object
-                    // https://stackoverflow.com/questions/42739256/how-get-random-item-from-es6-map-or-set
-                    let cntr = 0;
-                    for (let key of currentMembers.keys()) {
-                        if (cntr++ === electedMemberRndIndex) {
-                            electedMemberMapIndex = key
-                        }
-                    }
+                    let electedMemberIndex = Math.floor(Math.random() * currentMembers.length)
 
                     // get the member name
-                    let displayName = currentMembers.get(electedMemberMapIndex).displayName
-                    console.log(`DBG  | {!teams} Team#${currentTeam} gets a new player : ${displayName}`)
-                    console.log(electedTeams)
+                    let displayName = currentMembers[electedMemberIndex]
+
+                    console.log(`CMD  | !teams | Team#${currentTeam} gets a new player : ${displayName}`)
 
                     // check if the team position exists in the final result variable
                     if (!Array.isArray(electedTeams[currentTeam])) {
@@ -532,29 +584,34 @@ client.on('message', async message => {
                     electedTeams[currentTeam].push(displayName)
 
                     // delete the index in the lottery pool
-                    currentMembers.delete(electedMemberMapIndex)
+                    currentMembers.splice(electedMemberIndex, 1)
 
                     // stop at team limit and start over at first position
                     currentTeam = (currentTeam == nbTeams) ? 1 : currentTeam + 1
+
                 }
 
-                // announcing the results ...
-                voteChannel.send(`🎲 Tirage au sort`)
+		let resultMessage = newEmbed('medium')
+		let resultStr = ""
 
                 // crawl the result variable by teams
                 // ACHTUNG : i does start at 1 and you have to loop over electedTeams and not nbTeams because of the "0" array element that creates itself when doing the first push
                 for (let i = 1; i < electedTeams.length; i++) {
 
                     // join all the names for the printing
-                    let teamStr = electedTeams[i].join(' :small_blue_diamond: ')
+                    resultStr += `${emojiCharacters[i]} ${electedTeams[i].join(' :small_blue_diamond: ')} :small_orange_diamond: ${electedTeams[i].length} joueurs\n`
 
-                    // team announcement
-                    voteChannel.send(`${emojiCharacters[i]} ${teamStr}`)
+                    console.log('CMD  | !teams | Team ' + i + ' members : ', electedTeams[i])
 
                 }
 
-                // be kind
-                voteChannel.send(`${pubgEmoji} reste un jeu, ne l'oubliez pas 🐔🍳`);
+		resultMessage
+                    .setTitle(`ÉQUIPES CRÉÉES !`)
+                    .setDescription(resultStr)
+
+                // team announcement
+                await voteChannel.send(resultMessage)
+                await voteChannel.send(`>>> ${pubgEmoji} reste un jeu, ne l'oubliez pas 🐔🍳`);
 
             }
 

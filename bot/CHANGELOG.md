@@ -1,3 +1,8 @@
+# 1.2
+
+ - NEW: Change output format and using Embeds
+ - FIX: !help -> !aide to avoid collision with other bots
+
 # 1.1
 
  - NEW: !teams command
