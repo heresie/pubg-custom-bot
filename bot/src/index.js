@@ -8,15 +8,6 @@ const emojiCharacters = require('./emojiCharacters');
 // init
 const client = new Discord.Client();
 
-//// specific discord configuration
-//const adminRoleName = 'Fondateurs';
-//const pollChannelName = 'votes';
-//
-//// poll timers
-//const maxResponseDelay = 10;
-//const betweenQuestionsDelay = 3;
-//const startPollDelay = 1;
-
 // specific discord configuration
 const adminRoleName = 'Responsable Custom';
 const pollChannelName = 'custom-vote';
@@ -44,27 +35,45 @@ let allowedCommands = [
     {
         name: "Liste des commandes disponibles",
         command: '!aide',
-        helper: '!aide'
+        helper: '!aide',
+        description: `Envoie cette aide en message privé à la personne l'ayant demandé.`
     },
     {
         name: "Démarrage d'un vote de match Custom",
         command: '!vote',
-        helper: '!vote'
+        helper: '!vote',
+        description: `Timers: démarrage ${startPollDelay}s / inter-choix ${maxResponseDelay}s / délai vote en fonction du nombre d'émoji à placer
+Propose de parcourir un arbre de choix. La commande s'arrête à la fin de l'arbre de choix.
+L'arbre de choix propose les différents modes de jeux PUBG organisés par l'équipe du Discord.
+En cas d'égalité : random entre les résultats à égalité.
+En cas de partie rapide : le bot fait le même parcours que l'humain en mode random.
+/!\ LE DECOMPTE COMMENCE A LA FIN D'APPARITION DE L'ENSEMBLE DES REACTIONS DU BOT
+/!\ LES REACTIONS FAITES AVANT LE DEBUT DU DECOMPTE NE SONT PAS COMPTABILISEES`
     },
     {
         name: "Démarrage d'un vote de rematch",
         command: '!rematch',
         helper: '!rematch',
+        description: `Timers: démarrage ${startPollDelay}s / inter-choix ${maxResponseDelay}s / délai vote en fonction du nombre d'émoji à placer
+Comme vote, mais l'arbre parcouru propose de relancer une partie avec les derniers paramètres.
+/!\ NE FONCTIONNE PAS LORSQUE LE BOT NE CONNAIT PAS LA PRECEDENTE PARTIE (EN CAS DE REBOOT)`,
     },
     {
         name: "Démarrage d'un timer avant le démarrage d'une partie",
         command: '!timer',
-        helper: '!timer {optionnel: nombre de secondes du décompte}',
+        helper: '!timer <delai>',
+        description: `Timers: démarrage 0s / rappel ${countdownStep}s / <delai> par défaut : ${defaultCountdownLimit}s
+Annonce les informations pour rejoindre la partie et lance un timer de <delai> secondes.
+Lance des rappels réguliers.`,
     },
     {
         name: "Démarrage d'un randomizer de team avec les personnes connectées au channel vocal",
         command: '!teams',
-        helper: '!teams {optionnel: nombre d\'équipes}'
+        helper: '!teams <n_teams>',
+        description: `Timers: démarrage ${startRandomizerDelay}s  / <n_teams> par défaut : ${defaultTeamLimit}
+Créé <n_teams> équipes en réalisant un random selon l'algorithme de Fisher-Yates.
+Utilise le nom des utilisateurs connectés sur le channel vocal "En Attente".
+/!\ ATTENTION AUX AFK ET PERSONNES QUI VONT QUITTER QUI TRAINENT DANS LE CHANNEL`
     }
 ];
 
@@ -470,10 +479,10 @@ client.on('message', async message => {
 
                 let remainingSeconds = Number(commandScan.args[0]) > 0 ? Number(commandScan.args[0]) : defaultCountdownLimit
 
-		let startMessage = newEmbed('medium')
-                                       .setTitle(`PARTIE CRÉÉE !`)
-                                       .setDescription(`${emojiCharacters[1]} Rendez-vous dans le menu \`Parties personnalisées\` de ${pubgEmoji}\n${emojiCharacters[2]} Sélectionnez n'importe quel type de partie\n${emojiCharacters[3]} Cherchez le terme \`perso\`\n${emojiCharacters[4]} Rejoignez la partie avec le mot de passe : \`yo\``)
-                                       .setFooter(`⏰ Vous disposez de ${remainingSeconds} secondes pour rejoindre la partie avant son démarrage.`)
+                let startMessage = newEmbed('medium')
+                    .setTitle(`PARTIE CRÉÉE !`)
+                    .setDescription(`${emojiCharacters[1]} Rendez-vous dans le menu \`Parties personnalisées\` de ${pubgEmoji}\n${emojiCharacters[2]} Sélectionnez n'importe quel type de partie\n${emojiCharacters[3]} Cherchez le terme \`perso\`\n${emojiCharacters[4]} Rejoignez la partie avec le mot de passe : \`yo\``)
+                    .setFooter(`⏰ Vous disposez de ${remainingSeconds} secondes pour rejoindre la partie avant son démarrage.`)
 
                 voteChannel.send(startMessage)
     
@@ -511,17 +520,13 @@ client.on('message', async message => {
         // !aide
         case '!aide':
 
-            let helpMessage = ''
-
             // for each globally configured commands
             allowedCommands.forEach(allowedCommand => {
 
-                helpMessage += `${allowedCommand.helper}\t${allowedCommand.name}\n`
+                // send a private message to the author of the command with the command helper
+                message.author.send(`\`\`\`${allowedCommand.helper}\n\n${allowedCommand.description}\n\`\`\``);
 
             })
-
-            // send a private message to the author of the command with the command helper
-            message.author.send(`\`\`\`\n${helpMessage}\`\`\``);
 
             break;
 
@@ -549,7 +554,7 @@ client.on('message', async message => {
                     return
                 }
 
-		for (let member of vocalChannel.members.values()) {
+                for (let member of vocalChannel.members.values()) {
                     currentMembers.push(member.displayName)
                 }
 
@@ -591,21 +596,21 @@ client.on('message', async message => {
 
                 }
 
-		let resultMessage = newEmbed('medium')
-		let resultStr = ""
+                let resultMessage = newEmbed('medium')
+                let resultStr = ""
 
                 // crawl the result variable by teams
                 // ACHTUNG : i does start at 1 and you have to loop over electedTeams and not nbTeams because of the "0" array element that creates itself when doing the first push
                 for (let i = 1; i < electedTeams.length; i++) {
 
                     // join all the names for the printing
-                    resultStr += `${emojiCharacters[i]} ${electedTeams[i].join(' :small_blue_diamond: ')} :small_orange_diamond: ${electedTeams[i].length} joueurs\n`
+                    resultStr += `${emojiCharacters[i]} ${electedTeams[i].sort(function(a,b){return b.score - a.score;}).join(' :small_blue_diamond: ')} :small_orange_diamond: ${electedTeams[i].length} joueurs\n`
 
                     console.log('CMD  | !teams | Team ' + i + ' members : ', electedTeams[i])
 
                 }
 
-		resultMessage
+        		resultMessage
                     .setTitle(`ÉQUIPES CRÉÉES !`)
                     .setDescription(resultStr)
 

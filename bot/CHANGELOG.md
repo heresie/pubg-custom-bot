@@ -1,3 +1,8 @@
+# 1.4
+
+ - SEC: Credentials change
+ - FIX: !aide : better tips for commands
+
 # 1.3
 
  - NEW: CI/CD Pipeline
