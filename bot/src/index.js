@@ -548,14 +548,17 @@ client.on('message', async message => {
                 // we start at team 1, nobody wants to be in team #0 duh!
                 let currentTeam = 1
 
-                // if nobody's in the vocal channel ...
-                if (vocalChannel.members.size == 0) {
-                    voteChannel.send(`> Aucune personne connectée au channel vocal \`${vocalChannelName}\` ...`)
-                    return
+                for (let member of vocalChannel.members.values()) {
+                    // DJ Patch
+                    if (member.displayName != "DJ") {
+                        currentMembers.push(member.displayName)
+                    }
                 }
 
-                for (let member of vocalChannel.members.values()) {
-                    currentMembers.push(member.displayName)
+                // if nobody's in the vocal channel ...
+                if (currentMembers.length == 0) {
+                    voteChannel.send(`> Aucune personne connectée au channel vocal \`${vocalChannelName}\` ...`)
+                    return
                 }
 
                 // shuffle more the list of current members for more random
