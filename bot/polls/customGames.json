@@ -1,7 +1,8 @@
 {
     "author": "Hérésie",
     "creationDate": "26-09-2019",
-    "version": "1.0",
+    "modificationDate": "12-12-2019",
+    "version": "1.3",
     "poll": {
         "answers": [
             {
@@ -52,7 +53,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                                                
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             },
                             {
@@ -97,7 +102,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                                                
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             },
                             {
@@ -142,7 +151,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                                                
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }                                                                                    
                                 ]
                             },
                             {
@@ -186,6 +199,10 @@
                                     },
                                     {
                                         "title": "SMG",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Grenades",
                                         "answers": []
                                     }                                                
                                 ]
@@ -232,7 +249,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                                                
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             },
                             {
@@ -277,7 +298,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                                                
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             }
                         ]
@@ -331,6 +356,10 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
                                     }                                                
                                 ]
                             },
@@ -379,6 +408,10 @@
                                     },
                                     {
                                         "title": "SMG",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Grenades",
                                         "answers": []
                                     }                                                
                                 ]
@@ -429,7 +462,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                                                
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             },
                             {
@@ -478,7 +515,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                                                
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             },
                             {
@@ -527,7 +568,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                                                
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             },
                             {
@@ -576,7 +621,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                                                
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             }                            
                         ]
@@ -626,7 +675,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                                                
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             },
                             {
@@ -671,7 +724,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                                                
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             },
                             {
@@ -716,7 +773,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                                                
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             },
                             {
@@ -761,7 +822,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                                                
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             },
                             {
@@ -806,7 +871,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                                                
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             },
                             {
@@ -851,7 +920,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                                                
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             }                            
                         ]
@@ -901,7 +974,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                                                
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             },
                             {
@@ -946,7 +1023,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                                                
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             },
                             {
@@ -991,7 +1072,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                                                
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             },
                             {
@@ -1036,7 +1121,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                                                
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             },
                             {
@@ -1080,6 +1169,10 @@
                                     },
                                     {
                                         "title": "SMG",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Grenades",
                                         "answers": []
                                     }                                                
                                 ]
@@ -1125,6 +1218,10 @@
                                     },
                                     {
                                         "title": "SMG",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Grenades",
                                         "answers": []
                                     }                                                
                                 ]
@@ -1383,7 +1480,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                    
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             },
                             {
@@ -1431,6 +1532,10 @@
                                     },
                                     {
                                         "title": "SMG",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Grenades",
                                         "answers": []
                                     }                                             
                                 ]
@@ -1481,7 +1586,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                                              
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             },
                             {
@@ -1530,7 +1639,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                                         
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             },
                             {
@@ -1579,7 +1692,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                                          
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             },
                             {
@@ -1628,7 +1745,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                                            
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             }
                         ]
@@ -1682,7 +1803,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                                      
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             },
                             {
@@ -1731,7 +1856,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                                        
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }                                    
                                 ]
                             },
                             {
@@ -1779,6 +1908,10 @@
                                     },
                                     {
                                         "title": "SMG",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Grenades",
                                         "answers": []
                                     }                                           
                                 ]
@@ -1829,7 +1962,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                                         
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             },
                             {
@@ -1878,7 +2015,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                                            
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             },
                             {
@@ -1927,7 +2068,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                                          
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             }                            
                         ]
@@ -1981,7 +2126,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                                        
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             },
                             {
@@ -2030,7 +2179,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                                     
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             },
                             {
@@ -2078,6 +2231,10 @@
                                     },
                                     {
                                         "title": "SMG",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Grenades",
                                         "answers": []
                                     }                                              
                                 ]
@@ -2128,6 +2285,10 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
                                     }                                 
                                 ]
                             },
@@ -2177,6 +2338,10 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
                                     }                                          
                                 ]
                             },
@@ -2225,6 +2390,10 @@
                                     },
                                     {
                                         "title": "SMG",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Grenades",
                                         "answers": []
                                     }                          
                                 ]
@@ -2280,7 +2449,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                               
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             },
                             {
@@ -2329,7 +2502,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }            
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             },
                             {
@@ -2378,7 +2555,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }             
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             },
                             {
@@ -2427,7 +2608,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                                
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             },
                             {
@@ -2476,7 +2661,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                                     
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             },
                             {
@@ -2525,7 +2714,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                     
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             }                            
                         ]
@@ -2579,7 +2772,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }            
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             },
                             {
@@ -2628,7 +2825,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                        
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             },
                             {
@@ -2677,7 +2878,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }            
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             },
                             {
@@ -2726,7 +2931,11 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
-                                    }                      
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
+                                    }
                                 ]
                             },
                             {
@@ -2774,6 +2983,10 @@
                                     },
                                     {
                                         "title": "SMG",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "Grenades",
                                         "answers": []
                                     }             
                                 ]
@@ -2824,6 +3037,10 @@
                                     {
                                         "title": "SMG",
                                         "answers": []
+                                    },
+                                    {
+                                        "title": "Grenades",
+                                        "answers": []
                                     }                        
                                 ]
                             }                            
@@ -2839,48 +3056,160 @@
                         "answers": [
                             {
                                 "title": "Armes normales",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }
+                                ]
                             },
                             {
                                 "title": "Western (Winchester/Colt)",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
                             },
                             {
                                 "title": "Arbalètes",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
                             },
                             {
                                 "title": "Poêles",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
                             },
                             {
                                 "title": "Pistols",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
                             },
                             {
                                 "title": "Assault Rifles (AR)",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
                             },
                             {
                                 "title": "Sniper Rifles (SR)",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
                             },
                             {
                                 "title": "VSS",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
                             },
                             {
                                 "title": "Overpower",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
                             },
                             {
                                 "title": "Shotguns",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
                             },
                             {
                                 "title": "SMG",
-                                "answers": []
-                            }   
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Grenades",
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            }
                         ]
                     },
                     {
@@ -2888,48 +3217,160 @@
                         "answers": [
                             {
                                 "title": "Armes normales",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
                             },
                             {
                                 "title": "Western (Winchester/Colt)",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
                             },
                             {
                                 "title": "Arbalètes",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
                             },
                             {
                                 "title": "Poêles",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
                             },
                             {
                                 "title": "Pistols",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
                             },
                             {
                                 "title": "Assault Rifles (AR)",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
                             },
                             {
                                 "title": "Sniper Rifles (SR)",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
                             },
                             {
                                 "title": "VSS",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
                             },
                             {
                                 "title": "Overpower",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
                             },
                             {
                                 "title": "Shotguns",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
                             },
                             {
                                 "title": "SMG",
-                                "answers": []
-                            }   
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Grenades",
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            }
                         ]
                     },
                     {
@@ -2937,48 +3378,160 @@
                         "answers": [
                             {
                                 "title": "Armes normales",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
                             },
                             {
                                 "title": "Western (Winchester/Colt)",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
                             },
                             {
                                 "title": "Arbalètes",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
                             },
                             {
                                 "title": "Poêles",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
                             },
                             {
                                 "title": "Pistols",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
                             },
                             {
                                 "title": "Assault Rifles (AR)",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
                             },
                             {
                                 "title": "Sniper Rifles (SR)",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
                             },
                             {
                                 "title": "VSS",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
                             },
                             {
                                 "title": "Overpower",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
                             },
                             {
                                 "title": "Shotguns",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
                             },
                             {
                                 "title": "SMG",
-                                "answers": []
-                            }   
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            },
+                            {
+                                "title": "Grenades",
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            }
                         ]
                     },
                     {
@@ -2986,48 +3539,173 @@
                         "answers": [
                             {
                                 "title": "Armes normales",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
                             },
                             {
                                 "title": "Western (Winchester/Colt)",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
                             },
                             {
                                 "title": "Arbalètes",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }
+                                ]
                             },
                             {
                                 "title": "Poêles",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }
+                                ]
                             },
                             {
                                 "title": "Pistols",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }
+                                ]
                             },
                             {
                                 "title": "Assault Rifles (AR)",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }
+                                ]
                             },
                             {
                                 "title": "Sniper Rifles (SR)",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }
+                                ]
                             },
                             {
                                 "title": "VSS",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }
+                                ]
                             },
                             {
                                 "title": "Overpower",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }
+                                ]
                             },
                             {
                                 "title": "Shotguns",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }
+                                ]
                             },
                             {
                                 "title": "SMG",
-                                "answers": []
-                            }   
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Grenades",
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Grenades",
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            }
                         ]
                     },
                     {
@@ -3035,48 +3713,160 @@
                         "answers": [
                             {
                                 "title": "Armes normales",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }
+                                ]
                             },
                             {
                                 "title": "Western (Winchester/Colt)",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }
+                                ]
                             },
                             {
                                 "title": "Arbalètes",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }
+                                ]
                             },
                             {
                                 "title": "Poêles",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }
+                                ]
                             },
                             {
                                 "title": "Pistols",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }
+                                ]
                             },
                             {
                                 "title": "Assault Rifles (AR)",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }
+                                ]
                             },
                             {
                                 "title": "Sniper Rifles (SR)",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }
+                                ]
                             },
                             {
                                 "title": "VSS",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }
+                                ]
                             },
                             {
                                 "title": "Overpower",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }
+                                ]
                             },
                             {
                                 "title": "Shotguns",
-                                "answers": []
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }
+                                ]
                             },
                             {
                                 "title": "SMG",
-                                "answers": []
-                            }   
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Grenades",
+                                "answers": [
+                                    {
+                                        "title": "1 point",
+                                        "answers": []
+                                    },
+                                    {
+                                        "title": "3 points",
+                                        "answers": []
+                                    }                                    
+                                ]
+                            }
                         ]
                     }
                 ]
