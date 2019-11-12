@@ -14,9 +14,9 @@ const pollChannelName = 'custom-vote';
 const vocalChannelName = 'En Attente';
 
 // poll timers
-const maxResponseDelay = 35;
+const maxResponseDelay = 30;
 const betweenQuestionsDelay = 3;
-const startPollDelay = 5;
+const startPollDelay = 3;
 const startRandomizerDelay = 10;
 
 // countdown timers
