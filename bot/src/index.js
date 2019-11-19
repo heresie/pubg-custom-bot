@@ -106,7 +106,7 @@ async function protectReactions(message, allowedEmojis) {
     collector.on('collect', (r) => {
         r.remove(r.users.first())
 
-        console.log(`PROT | ${c} | Blocked unsollicited reaction on bot message`)
+        console.log(`PROT | Blocked unsollicited reaction on bot message`)
     });
     
 }
