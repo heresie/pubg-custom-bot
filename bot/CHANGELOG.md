@@ -1,3 +1,7 @@
+# 1.6.1
+
+ - FIX: Debug crashing app
+
 # 1.6
 
  - FIX: Randomizer was wrong all the time ! :'( Fixed that
