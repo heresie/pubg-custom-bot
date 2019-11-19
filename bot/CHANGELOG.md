@@ -1,3 +1,10 @@
+# 1.5
+
+ - NEW: `!teams <nb_teams> mv` can move users into vocal channels
+ - NEW: `!end` switches all players from Vocal channels to Waiting channel
+ - NEW: Added `random` to weapons
+ - FIX: `!teams` created before the end of timer`
+
 # 1.4
 
  - SEC: Credentials change
