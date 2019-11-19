@@ -1,3 +1,7 @@
+# 1.5.1
+
+ - FIX: Plural in VSS question
+
 # 1.5
 
  - NEW: `!teams <nb_teams> mv` can move users into vocal channels
