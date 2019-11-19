@@ -1,3 +1,9 @@
+# 1.6
+
+ - FIX: Randomizer was wrong all the time ! :'( Fixed that
+ - FIX: Changed image displayed in Embeds
+ - FIX: Changed logging messages
+
 # 1.5.1
 
  - FIX: Plural in VSS question

@@ -81,18 +81,22 @@ Utilise le nom des utilisateurs connectés sur le channel vocal "En Attente" et 
     },
     {
         name: "Déplacement de tous les joueurs dans le salon En Attente",
-        command: '!end',
-        helper: '!end',
+        command: '!assemble',
+        helper: '!assemble',
         description: `Déplace les joueurs vers le channel En Attente`
     }
 ];
 
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+  
 function pad2(nb) {
     return (nb < 10 ? '0' : '') + nb
 }
 
 // protects a message from unwanted reactions
-async function denyReactions(message, allowedEmojis) {
+async function protectReactions(message, allowedEmojis) {
 
     const collector = message.createReactionCollector(
         (reaction, user) => !user.bot && (!allowedEmojis.includes(reaction.emoji.name)),
@@ -101,6 +105,8 @@ async function denyReactions(message, allowedEmojis) {
 
     collector.on('collect', (r) => {
         r.remove(r.users.first())
+
+        console.log(`PROT | ${c} | Blocked unsollicited reaction on bot message`)
     });
     
 }
@@ -128,15 +134,13 @@ function dumpError(err) {
 
 function getVocalChannelStartingWith(message, channelStartString) {
 
-    console.log(`Finding Vocal Channels starting with ${channelStartString}`)
-
     return message.guild.channels.filter(channel => channel.type === 'voice' && channel.name.startsWith(channelStartString))
 
 }
 
-function moveUsers(v, d, reason) {
+function moveUsers(v, d, c, reason) {
 
-    console.log(`Moving users from ${v.name} to ${d.name}`)
+    console.log(`MOVE | ${c} | Moving users from ${v.name} to ${d.name}`)
 
     for (let member of v.members.values()) {
 
@@ -150,19 +154,19 @@ function moveUsers(v, d, reason) {
 // randomize array
 function arrayShuffle(array) {
 
-    var currentIndex = array.length, temporaryValue, randomIndex;
+    var currentIndex = array.length, temporaryValue, randomIndex
 
     // While there remain elements to shuffle...
     while (0 !== currentIndex) {
 
         // Pick a remaining element...
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
+        randomIndex = getRandomInt(0, currentIndex)
+        currentIndex -= 1
 
         // And swap it with the current element.
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
+        temporaryValue = array[currentIndex]
+        array[currentIndex] = array[randomIndex]
+        array[randomIndex] = temporaryValue
     }
 
     return array;
@@ -181,13 +185,13 @@ function newEmbed(type) {
 
        case 'vote':
            richEmbed
-               .setThumbnail('http://pngimg.com/uploads/pubg/pubg_PNG56.png')
+               .setThumbnail('https://i.ibb.co/vjNwdQW/imgbin-playerunknown-s-battlegrounds-garena-free-fire-fortnite-t-shirt-android-t-shirt-GGKKs-Dyer-FSXX.png')
                .setFooter(`⏰ Vous disposez de ${maxResponseDelay} secondes pour réagir à la question.`, '')
            break;
 
        case 'medium':
            richEmbed
-               .setThumbnail('http://pngimg.com/uploads/pubg/pubg_PNG56.png')
+               .setThumbnail('https://i.ibb.co/vjNwdQW/imgbin-playerunknown-s-battlegrounds-garena-free-fire-fortnite-t-shirt-android-t-shirt-GGKKs-Dyer-FSXX.png')
            break;
 
        default:
@@ -273,29 +277,22 @@ function startPoll(voteChannel, questionObj, recapChoices = [], random = false) 
                         {time: maxResponseDelay * 1000}
                     ).then(collectedEmojis => {
                         question.objs.e = collectedEmojis
-                        console.log(' => Emojis collected')
                     });
 
-                    denyReactions(question.objs.q, question.allowed_emojis)
-
-                    console.log(' => Emojis collecting')
+                    protectReactions(question.objs.q, question.allowed_emojis)
 
                     // post all the reactions
                     for (let i = 0; i < question.nb_answers; i++) {
                         await question.objs.q.react(emojiCharacters[i + 1]);
                     }
 
-                    console.log(' => Reactions posted')
-
                     // wait the time minus the 1sec/answer quota that is the usual tick rate for the API
                     await new Promise(done => setTimeout(done, (maxResponseDelay - (awaitEmojiTempoPerSec * question.nb_answers)) * 1000));
-
-                    console.log(' => end of promise')
 
                 } else {
 
                     // god of random
-                    randomIndex = Math.floor(Math.random() * question.allowed_emojis.length)
+                    randomIndex = getRandomInt(1, question.allowed_emojis.length)
 
                 }
 
@@ -351,7 +348,7 @@ function startPoll(voteChannel, questionObj, recapChoices = [], random = false) 
                             }
 
                             // elect the randomized winner
-                            question.winner = shortList[Math.floor(Math.random() * shortList.length)];
+                            question.winner = shortList[getRandomInt(0, shortList.length - 1)];
                             question.success = true;
                             question.randomized = true;
 
@@ -594,12 +591,12 @@ client.on('message', async message => {
 
             break;
 
-        case '!end':
+        case '!assemble':
 
             let sourceVocalChannels = getVocalChannelStartingWith(message, vocalTeamChannelWildcard)
 
             for (let sourceVocalChannel of sourceVocalChannels.values()) {
-                moveUsers(sourceVocalChannel, vocalChannel, 
+                moveUsers(sourceVocalChannel, vocalChannel, commandScan.command,
                     `La Custom vient de se finir. Vous avez été déplacé vers \`${vocalChannel.name}\`.`) 
             }
             
@@ -630,9 +627,6 @@ client.on('message', async message => {
                 // prepare the array of randomized teams (result variable)
                 let electedTeams = []
 
-                // we start at team 1, nobody wants to be in team #0 duh!
-                let currentTeam = 1
-
                 for (let member of vocalChannel.members.values()) {
                     // if not DJ and not deafened ...
                     if (member.displayName != "DJ" && !member.selfDeaf) {
@@ -651,11 +645,15 @@ client.on('message', async message => {
 
                 console.log('CMD  | !teams | Lottery pool : ', currentMembers)
 
+                // we start at team 1, nobody wants to be in team #0 duh!
+                // nope! changed that! now we random the first index
+                let currentTeam = getRandomInt(1, nbTeams)
+
                 // while we have someone in the lottery pool ...
                 while (currentMembers.length > 0) {
 
                     // let's do some random
-                    let electedMemberIndex = Math.floor(Math.random() * currentMembers.length)
+                    let electedMemberIndex = getRandomInt(0, currentMembers.length - 1)
 
                     // get the member name
                     let displayName = currentMembers[electedMemberIndex]
@@ -707,12 +705,12 @@ client.on('message', async message => {
                         let targetVocalChannel = getVocalChannelStartingWith(message, vocalTeamChannelWildcard + pad2(i))
 
                         if (!targetVocalChannel) {
-                            console.log(`${targetVocalChannel} undefined ... stopping`)
+                            console.log(`ERR  | !teams | movePlayers | targetVocalChannel undefined ... stopping`)
                             return
                         }
 
-                        moveUsers(targetVocalChannel.first(), dispatchChannel, 
-                            `Tu as été déplacé vers \`${dispatchChannel.name}\` car les joueurs tirés aux sort sont prioritaires sur ces channels vocaux.`)
+                        moveUsers(targetVocalChannel.first(), dispatchChannel, commandScan.command,
+                            `Tu as été déplacé vers \`${dispatchChannel.name}\` : les joueurs tirés aux sort sont prioritaires sur ces channels vocaux.`)
 
                         for (let j = 0; j < electedTeams[i].length; j++) {
 
@@ -721,9 +719,9 @@ client.on('message', async message => {
                             // if the user has not moved in the meantime (or renamed ¯\_(ツ)_/¯)...
                             if (m) {
                                 m.setVoiceChannel(targetVocalChannel.first())
-                                console.log(`User ${electedTeams[i][j]} moved into vocal channel ${i}`)
+                                console.log(`CMD  | !teams | movePlayers | User ${electedTeams[i][j]} moved into vocal channel ${i}`)
                             } else {
-                                console.log(`User ${electedTeams[i][j]} not found`)
+                                console.log(`ERR  | !teams | movePlayers | User ${electedTeams[i][j]} not found`)
                             }
 
                         }
