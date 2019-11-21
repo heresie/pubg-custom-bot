@@ -1,6 +1,7 @@
 // requirements
 const Discord = require('discord.js');
 const auth = require('../credentials/auth.json');
+const fs = require('fs')
 const pollQuestions = require('../polls/customGames.json');
 const rematchQuestions = require('../polls/rematchGames.json');
 const emojiCharacters = require('./emojiCharacters');
@@ -37,6 +38,12 @@ let vocalChannel = null;
 let dispatchChannel = null;
 
 let allowedCommands = [
+    {
+        name: "Jouer un son <sound> avec <voice>",
+        command: '!mp3',
+        helper: '!mp3 <voice> <sound>',
+        description: `Jouer un son <sound> avec <voice>`
+    },
     {
         name: "Liste des commandes disponibles",
         command: '!aide',
@@ -481,6 +488,40 @@ client.on('message', async message => {
 
     // do the action
     switch (commandScan.command) {
+
+        case '!mp3':
+
+            if (message.member.voice.channel) {
+                const connection = await message.member.voice.channel.join();
+            } else {
+                message.reply('You need to join a voice channel first!');
+            }            
+
+            // move or not ?
+            let mp3Voice = commandScan.args[1]
+            let mp3Sound = commandScan.args[2]
+            
+            let prefix = 'teams_'
+
+            let mp3FilePath = './sounds/' + mp3Voice + '/' + prefix + mp3Sound + '.mp3'
+
+            // file exists?
+            fs.access(path, fs.F_OK, (err) => {
+                if (err) {
+                  message.reply('File not found ' + mp3FilePath)
+                  return
+                }
+            })
+
+            const dispatcher = connection.play(mp3FilePath, {
+                volume: 1
+            })
+
+            dispatcher.on('finish', () => {
+                connection.disconnect()
+            })
+
+            break;
 
         // !vote
         case '!vote':

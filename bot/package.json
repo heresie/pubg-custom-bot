@@ -24,7 +24,9 @@
   },
   "homepage": "https://gitlab.com/ppataki/pubg-custom-bot",
   "dependencies": {
-    "discord.js": "^11.5.1"
+    "discord.js": "^11.5.1",
+    "ffmpeg": "0.0.4",
+    "node-opus": "^0.3.3"
   },
   "devDependencies": {}
 }
