@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/ppataki/pubg-custom-bot.git"
+    "url": "https://gitlab.com/heresie/pubg-custom-bot"
   },
   "keywords": [
     "discord",
@@ -20,12 +20,14 @@
   "author": "Pierre PATAKI",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://gitlab.com/ppataki/pubg-custom-bot/issues"
+    "url": "https://gitlab.com/heresie/pubg-custom-bot/issues"
   },
-  "homepage": "https://gitlab.com/ppataki/pubg-custom-bot",
+  "homepage": "https://gitlab.com/heresie/pubg-custom-bot",
   "dependencies": {
     "discord.js": "^11.5.1",
-    "ffmpeg": "0.0.4",
+    "erlpack": "github:hammerandchisel/erlpack",
+    "ffbinaries": "^1.1.4",
+    "libsodium-wrappers": "^0.7.6",
     "node-opus": "^0.3.3"
   },
   "devDependencies": {}

@@ -1,10 +1,14 @@
 // requirements
-const Discord = require('discord.js');
-const auth = require('../credentials/auth.json');
+const Discord = require('discord.js')
+const auth = require('../credentials/auth.json')
 const fs = require('fs')
-const pollQuestions = require('../polls/customGames.json');
-const rematchQuestions = require('../polls/rematchGames.json');
-const emojiCharacters = require('./emojiCharacters');
+const pollQuestions = require('../polls/customGames.json')
+const rematchQuestions = require('../polls/rematchGames.json')
+const emojiCharacters = require('./emojiCharacters')
+const streamOptions = { seek: 0, volume: 100 }
+
+var path = require('path')
+var appDir = path.dirname(require.main.filename)
 
 // init
 const client = new Discord.Client();
@@ -38,6 +42,12 @@ let vocalChannel = null;
 let dispatchChannel = null;
 
 let allowedCommands = [
+    {
+        name: "Mise à jour du statut de présence de CustomVote",
+        command: '!status',
+        helper: '!status <statut>',
+        description: `Mise à jour de la présence de CustomVote`
+    },
     {
         name: "Jouer un son <sound> avec <voice>",
         command: '!mp3',
@@ -455,7 +465,7 @@ client.on('ready', () => {
 
     client.user.setPresence({
         game: {
-            name: 'Fox, mais t\'es où? Pas là'
+            name: `Fox, mais t'es où? Pas là`
         }
     })
 
@@ -489,36 +499,70 @@ client.on('message', async message => {
     // do the action
     switch (commandScan.command) {
 
+        case '!status':
+
+            let newStatus = commandScan.args ? commandScan.args.join(' ') : ''
+
+            if (newStatus != '') {
+
+                client.user.setPresence({
+                    game: {
+                        name: newStatus
+                    }
+                })
+
+                console.log(`SYS  | Presence updated by ${message.member.name} : ${newStatus}`)
+
+                message.reply('Presence updated')
+
+            }
+
+            break;
+
         case '!mp3':
 
-            if (message.member.voice.channel) {
-                const connection = await message.member.voice.channel.join();
-            } else {
-                message.reply('You need to join a voice channel first!');
-            }            
-
             // move or not ?
-            let mp3Voice = commandScan.args[1]
-            let mp3Sound = commandScan.args[2]
+            let mp3Voice = commandScan.args[0]
+            let mp3Sound = commandScan.args[1]
             
             let prefix = 'teams_'
 
-            let mp3FilePath = './sounds/' + mp3Voice + '/' + prefix + mp3Sound + '.mp3'
+            let mp3FilePath = appDir + '/../sounds/' + mp3Voice + '/' + prefix + mp3Sound + '.mp3'
 
-            // file exists?
-            fs.access(path, fs.F_OK, (err) => {
+            // file
+            fs.access(mp3FilePath, fs.F_OK, async (err) => {
+
                 if (err) {
-                  message.reply('File not found ' + mp3FilePath)
-                  return
+
+                    message.reply('File not found ' + mp3FilePath)
+
+                } else {
+                    
+                    if (message.member.voiceChannel) {
+
+                        await message.member.voiceChannel.join()
+                            .then(connection => {
+
+                                const dispatcher = connection.playFile(mp3FilePath, streamOptions)
+                            
+                                dispatcher.on('end', async (end) => {
+
+                                    await new Promise(done => setTimeout(done, 5 * 1000));
+
+                                    connection.disconnect()
+                                })
+        
+                            })
+                        
+
+                    } else {
+
+                        message.reply('You need to join a voice channel first!');
+
+                    }            
+        
                 }
-            })
 
-            const dispatcher = connection.play(mp3FilePath, {
-                volume: 1
-            })
-
-            dispatcher.on('finish', () => {
-                connection.disconnect()
             })
 
             break;
@@ -670,7 +714,7 @@ client.on('message', async message => {
 
                 for (let member of vocalChannel.members.values()) {
                     // if not DJ and not deafened ...
-                    if (member.displayName != "DJ" && !member.selfDeaf) {
+                    if (member.displayName != "DJ" && member.displayName != "CustomVote" && !member.selfDeaf) {
                         currentMembers.push(member.displayName)
                     }
                 }

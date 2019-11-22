@@ -1,3 +1,9 @@
+# 1.6.2
+
+ - FIX: Dockerfile optimisations
+ - FIX: MP3 Update
+ - NEW: !mp3 and !status commands
+
 # 1.6.1
 
  - FIX: Debug crashing app
