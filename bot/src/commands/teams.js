@@ -106,7 +106,7 @@ exports.run = async (client, message, args) => {
     // if there is a move demand
     if (movePlayers) {
 
-        await client.tools.playFile(client, message, 'teams_before_switch', client.config.voice.currentVoice)
+        await client.tools.playFile(client, message, 'teams_before_switch', client.config.voice.currentVoice, 10).catch((error) => { console.log(`DEBG | File not found ${error}`)  })
 
         resultStr += `\nDéplacement des joueurs dans les channels vocaux ...`
 

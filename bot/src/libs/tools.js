@@ -62,7 +62,6 @@ module.exports = {
         return new Promise((resolve, reject) => {
             fs.access(filePath, fs.F_OK, (err) => {
                 if (err) {
-                    console.error(err)
                     return reject(err)
                 }
                 //file exists
@@ -71,26 +70,33 @@ module.exports = {
         })
     },
 
-    playFile(client, message, mp3Sound, mp3Voice) {
+    playFile(client, message, mp3Sound, mp3Folder, volume = null) {
 
         return new Promise((resolve, reject) => {
     
-            let mp3FilePath = client.appDir + '/../sounds/' + mp3Voice + '/' + mp3Sound + '.mp3'
+            let mp3FilePath = client.appDir + '/../sounds/' + mp3Folder + '/' + mp3Sound + '.mp3'
     
-            if (this.file_exists(mp3FilePath)) {
+            this.file_exists(mp3FilePath).then(() => {
     
                 if (message.member.voiceChannel) {
     
                     message.member.voiceChannel.join()
                         .then(connection => {
             
-                        const dispatcher = connection.playFile(mp3FilePath, client.config.voice.streamOptions)
+                        let streamOptions = client.config.voice.streamOptions
+
+                        if (volume) {
+                            streamOptions.volume = volume
+                            console.log(`EMIT | Temporily setting volume to {${volume}}`)
+                        }
+
+                        const dispatcher = connection.playFile(mp3FilePath, streamOptions)
                     
                         console.log(`EMIT | Playing {${mp3FilePath.replace(/^.*[\\\/]/, '')}} to {${message.member.voiceChannel.name}}`)
 
                         dispatcher.on('end', async (end) => {
         
-                            await new Promise(done => setTimeout(done, 5 * 1000))
+                            await new Promise(done => setTimeout(done, 0.5 * 1000))
         
                             connection.disconnect()
     
@@ -108,17 +114,17 @@ module.exports = {
                     return reject(err)
     
                 }
-    
-            } else {
-    
+            
+            }).catch((error) => {
+
                 let err = 'File not found ' + mp3FilePath
-    
-                message.reply(err);
-    
+
+                console.log(`EMIT | File not found {${mp3FilePath}}`)
+
                 return reject(err);
-    
-            }
-        
+
+            })
+             
         })
     
     },

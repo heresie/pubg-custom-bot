@@ -8,7 +8,6 @@ RUN mkdir -p ${WORKDIR}  && \
               ffmpeg
 
 COPY bot/package.json ${WORKDIR}
-COPY bot/package-lock.json ${WORKDIR}
 
 RUN mkdir -p ${WORKDIR} && \
     cd ${WORKDIR}       && \

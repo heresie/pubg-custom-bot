@@ -17,7 +17,7 @@
         },
         "allowedVoices": ["default", "joyeux", "taverne"],
         "currentVoice": "default",
-        "defaultVolume": 10
+        "defaultVolume": 0.5
     },
     "delays": {
         "maxResponseDelay": 30,
