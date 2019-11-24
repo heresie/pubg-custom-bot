@@ -20,9 +20,9 @@
         "defaultVolume": 10
     },
     "delays": {
-        "maxResponseDelay": 10,
+        "maxResponseDelay": 30,
         "betweenQuestionsDelay": 3,
-        "startPollDelay": 0,
+        "startPollDelay": 3,
         "startRandomizerDelay": 10,
         "awaitEmojiTempoPerSec": 0.2,
         "defaultCountdownLimit": 120,

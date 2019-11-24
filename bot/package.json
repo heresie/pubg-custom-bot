@@ -1,8 +1,8 @@
 {
   "name": "pubg-custom-bot",
   "description": "Discord Bot for PUBG Custom Games",
-  "version": "0.0.1",
-  "main": "index.js",
+  "version": "2.0.1",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,7 +17,7 @@
     "pubg",
     "custom"
   ],
-  "author": "Pierre PATAKI",
+  "author": "https://gitlab.com/heresie",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://gitlab.com/heresie/pubg-custom-bot/issues"

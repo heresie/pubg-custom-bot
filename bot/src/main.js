@@ -14,7 +14,7 @@ client.commands = new Enmap()
 client.auth = require('./config/credentials.json')
 client.config = require('./config/config.json')
 client.appDir = path.dirname(require.main.filename)
-client.customEmojis = require('./emojiCharacters')
+client.customEmojis = require('./config/emojiCharacters')
 client.tools = require('./libs/tools.js')
 client.polls = {
     default: require('../polls/customGames.json'),
