@@ -1498,7 +1498,1324 @@
                     },
                     {
                         "title": "CQB",
-                        "answers": []
+                        "answers": [
+                            {
+                                "title": "Erangel",
+                                "answers": [
+                                    {
+                                        "title": "Solo",
+                                        "answers": [
+                                            {
+                                                "title": "Armes normales",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Arbalètes",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Poêles",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Pistols",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Assault Rifles (AR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Sniper Rifles (SR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Designated Marksman Rifles (DMR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "VSS",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Overpower",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Shotguns",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "SMG",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Grenades",
+                                                "answers": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Duos",
+                                        "answers": [
+                                            {
+                                                "title": "Armes normales",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Arbalètes",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Poêles",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Pistols",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Assault Rifles (AR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Sniper Rifles (SR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Designated Marksman Rifles (DMR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "VSS",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Overpower",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Shotguns",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "SMG",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Grenades",
+                                                "answers": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Trios",
+                                        "answers": [
+                                            {
+                                                "title": "Armes normales",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Arbalètes",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Poêles",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Pistols",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Assault Rifles (AR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Sniper Rifles (SR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Designated Marksman Rifles (DMR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "VSS",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Overpower",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Shotguns",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "SMG",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Grenades",
+                                                "answers": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Squads",
+                                        "answers": [
+                                            {
+                                                "title": "Armes normales",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Arbalètes",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Poêles",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Pistols",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Assault Rifles (AR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Sniper Rifles (SR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Designated Marksman Rifles (DMR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "VSS",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Overpower",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Shotguns",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "SMG",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Grenades",
+                                                "answers": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Deux (grosses) équipes",
+                                        "answers": [
+                                            {
+                                                "title": "Armes normales",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Arbalètes",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Poêles",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Pistols",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Assault Rifles (AR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Sniper Rifles (SR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Designated Marksman Rifles (DMR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "VSS",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Overpower",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Shotguns",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "SMG",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Grenades",
+                                                "answers": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Trois (grosses) équipes",
+                                        "answers": [
+                                            {
+                                                "title": "Armes normales",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Arbalètes",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Poêles",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Pistols",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Assault Rifles (AR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Sniper Rifles (SR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Designated Marksman Rifles (DMR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "VSS",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Overpower",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Shotguns",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "SMG",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Grenades",
+                                                "answers": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {  
+                                "title": "Miramar",
+                                "answers": [
+                                    {
+                                        "title": "Solo",
+                                        "answers": [
+                                            {
+                                                "title": "Armes normales",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Western (Winchester/Colt)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Arbalètes",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Poêles",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Pistols",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Assault Rifles (AR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Sniper Rifles (SR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "VSS",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Overpower",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Shotguns",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "SMG",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Grenades",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Random",
+                                                "answers": []
+                                            }                                                
+                                        ]
+                                    },
+                                    {
+                                        "title": "Duos",
+                                        "answers": [
+                                            {
+                                                "title": "Armes normales",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Western (Winchester/Colt)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Arbalètes",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Poêles",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Pistols",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Assault Rifles (AR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Sniper Rifles (SR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "VSS",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Overpower",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Shotguns",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "SMG",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Grenades",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Random",
+                                                "answers": []
+                                            }                                                
+                                        ]
+                                    },
+                                    {
+                                        "title": "Trios",
+                                        "answers": [
+                                            {
+                                                "title": "Armes normales",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Western (Winchester/Colt)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Arbalètes",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Poêles",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Pistols",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Assault Rifles (AR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Sniper Rifles (SR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Designated Marksman Rifles (DMR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "VSS",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Overpower",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Shotguns",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "SMG",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Grenades",
+                                                "answers": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Squads",
+                                        "answers": [
+                                            {
+                                                "title": "Armes normales",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Western (Winchester/Colt)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Arbalètes",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Poêles",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Pistols",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Assault Rifles (AR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Sniper Rifles (SR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Designated Marksman Rifles (DMR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "VSS",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Overpower",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Shotguns",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "SMG",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Grenades",
+                                                "answers": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Deux (grosses) équipes",
+                                        "answers": [
+                                            {
+                                                "title": "Armes normales",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Western (Winchester/Colt)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Arbalètes",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Poêles",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Pistols",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Assault Rifles (AR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Sniper Rifles (SR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Designated Marksman Rifles (DMR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "VSS",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Overpower",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Shotguns",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "SMG",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Grenades",
+                                                "answers": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Trois (grosses) équipes",
+                                        "answers": [
+                                            {
+                                                "title": "Armes normales",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Western (Winchester/Colt)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Arbalètes",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Poêles",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Pistols",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Assault Rifles (AR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Sniper Rifles (SR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Designated Marksman Rifles (DMR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "VSS",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Overpower",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Shotguns",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "SMG",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Grenades",
+                                                "answers": []
+                                            }
+                                        ]
+                                    }                            
+                                ]
+                            },
+                            {
+                                "title": "Vikendi",
+                                "answers": [
+                                    {
+                                        "title": "Solo",
+                                        "answers": [
+                                            {
+                                                "title": "Armes normales",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Arbalètes",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Poêles",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Pistols",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Assault Rifles (AR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Sniper Rifles (SR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Designated Marksman Rifles (DMR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "VSS",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Overpower",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Shotguns",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "SMG",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Grenades",
+                                                "answers": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Duos",
+                                        "answers": [
+                                            {
+                                                "title": "Armes normales",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Arbalètes",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Poêles",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Pistols",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Assault Rifles (AR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Sniper Rifles (SR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Designated Marksman Rifles (DMR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "VSS",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Overpower",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Shotguns",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "SMG",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Grenades",
+                                                "answers": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Trios",
+                                        "answers": [
+                                            {
+                                                "title": "Armes normales",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Arbalètes",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Poêles",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Pistols",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Assault Rifles (AR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Sniper Rifles (SR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Designated Marksman Rifles (DMR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "VSS",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Overpower",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Shotguns",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "SMG",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Grenades",
+                                                "answers": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Squads",
+                                        "answers": [
+                                            {
+                                                "title": "Armes normales",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Arbalètes",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Poêles",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Pistols",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Assault Rifles (AR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Sniper Rifles (SR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Designated Marksman Rifles (DMR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "VSS",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Overpower",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Shotguns",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "SMG",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Grenades",
+                                                "answers": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Deux (grosses) équipes",
+                                        "answers": [
+                                            {
+                                                "title": "Armes normales",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Arbalètes",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Poêles",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Pistols",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Assault Rifles (AR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Sniper Rifles (SR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Designated Marksman Rifles (DMR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "VSS",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Overpower",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Shotguns",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "SMG",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Grenades",
+                                                "answers": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Trois (grosses) équipes",
+                                        "answers": [
+                                            {
+                                                "title": "Armes normales",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Arbalètes",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Poêles",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Pistols",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Assault Rifles (AR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Sniper Rifles (SR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Designated Marksman Rifles (DMR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "VSS",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Overpower",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Shotguns",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "SMG",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Grenades",
+                                                "answers": []
+                                            }
+                                        ]
+                                    }                            
+                                ]
+                            },
+                            {
+                                "title": "Sanhok",
+                                "answers": [
+                                    {
+                                        "title": "Solo",
+                                        "answers": [
+                                            {
+                                                "title": "Armes normales",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Arbalètes",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Poêles",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Pistols",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Assault Rifles (AR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Sniper Rifles (SR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Designated Marksman Rifles (DMR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "VSS",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Overpower",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Shotguns",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "SMG",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Grenades",
+                                                "answers": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Duos",
+                                        "answers": [
+                                            {
+                                                "title": "Armes normales",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Arbalètes",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Poêles",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Pistols",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Assault Rifles (AR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Sniper Rifles (SR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Designated Marksman Rifles (DMR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "VSS",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Overpower",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Shotguns",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "SMG",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Grenades",
+                                                "answers": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Trios",
+                                        "answers": [
+                                            {
+                                                "title": "Armes normales",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Arbalètes",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Poêles",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Pistols",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Assault Rifles (AR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Sniper Rifles (SR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Designated Marksman Rifles (DMR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "VSS",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Overpower",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Shotguns",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "SMG",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Grenades",
+                                                "answers": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Squads",
+                                        "answers": [
+                                            {
+                                                "title": "Armes normales",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Arbalètes",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Poêles",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Pistols",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Assault Rifles (AR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Sniper Rifles (SR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Designated Marksman Rifles (DMR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "VSS",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Overpower",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Shotguns",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "SMG",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Grenades",
+                                                "answers": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Deux (grosses) équipes",
+                                        "answers": [
+                                            {
+                                                "title": "Armes normales",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Arbalètes",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Poêles",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Pistols",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Assault Rifles (AR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Sniper Rifles (SR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Designated Marksman Rifles (DMR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "VSS",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Overpower",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Shotguns",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "SMG",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Grenades",
+                                                "answers": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "3 équipes",
+                                        "answers": [
+                                            {
+                                                "title": "Armes normales",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Arbalètes",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Poêles",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Pistols",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Assault Rifles (AR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Sniper Rifles (SR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Designated Marksman Rifles (DMR)",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "VSS",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Overpower",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Shotguns",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "SMG",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Grenades",
+                                                "answers": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         "title": "Guerre des tranchées",
