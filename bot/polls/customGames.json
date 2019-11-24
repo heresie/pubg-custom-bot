@@ -1,8 +1,8 @@
 {
     "author": "Hérésie",
     "creationDate": "26-09-2019",
-    "modificationDate": "12-12-2019",
-    "version": "1.3",
+    "modificationDate": "22-11-2019",
+    "version": "1.5",
     "poll": {
         "answers": [
             {
@@ -39,6 +39,10 @@
                                         "answers": []
                                     },
                                     {
+                                        "title": "Designated Marksman Rifles (DMR)",
+                                        "answers": []
+                                    },
+                                    {
                                         "title": "VSS",
                                         "answers": []
                                     },
@@ -56,10 +60,6 @@
                                     },
                                     {
                                         "title": "Grenades",
-                                        "answers": []
-                                    },
-                                    {
-                                        "title": "Random",
                                         "answers": []
                                     }
                                 ]
@@ -92,6 +92,10 @@
                                         "answers": []
                                     },
                                     {
+                                        "title": "Designated Marksman Rifles (DMR)",
+                                        "answers": []
+                                    },
+                                    {
                                         "title": "VSS",
                                         "answers": []
                                     },
@@ -109,10 +113,6 @@
                                     },
                                     {
                                         "title": "Grenades",
-                                        "answers": []
-                                    },
-                                    {
-                                        "title": "Random",
                                         "answers": []
                                     }
                                 ]
@@ -145,6 +145,10 @@
                                         "answers": []
                                     },
                                     {
+                                        "title": "Designated Marksman Rifles (DMR)",
+                                        "answers": []
+                                    },
+                                    {
                                         "title": "VSS",
                                         "answers": []
                                     },
@@ -163,11 +167,7 @@
                                     {
                                         "title": "Grenades",
                                         "answers": []
-                                    },
-                                    {
-                                        "title": "Random",
-                                        "answers": []
-                                    }                                                                                    
+                                    }
                                 ]
                             },
                             {
@@ -198,6 +198,10 @@
                                         "answers": []
                                     },
                                     {
+                                        "title": "Designated Marksman Rifles (DMR)",
+                                        "answers": []
+                                    },
+                                    {
                                         "title": "VSS",
                                         "answers": []
                                     },
@@ -216,11 +220,7 @@
                                     {
                                         "title": "Grenades",
                                         "answers": []
-                                    },
-                                    {
-                                        "title": "Random",
-                                        "answers": []
-                                    }                                                
+                                    }
                                 ]
                             },
                             {
@@ -251,6 +251,10 @@
                                         "answers": []
                                     },
                                     {
+                                        "title": "Designated Marksman Rifles (DMR)",
+                                        "answers": []
+                                    },
+                                    {
                                         "title": "VSS",
                                         "answers": []
                                     },
@@ -268,10 +272,6 @@
                                     },
                                     {
                                         "title": "Grenades",
-                                        "answers": []
-                                    },
-                                    {
-                                        "title": "Random",
                                         "answers": []
                                     }
                                 ]
@@ -304,6 +304,10 @@
                                         "answers": []
                                     },
                                     {
+                                        "title": "Designated Marksman Rifles (DMR)",
+                                        "answers": []
+                                    },
+                                    {
                                         "title": "VSS",
                                         "answers": []
                                     },
@@ -321,10 +325,6 @@
                                     },
                                     {
                                         "title": "Grenades",
-                                        "answers": []
-                                    },
-                                    {
-                                        "title": "Random",
                                         "answers": []
                                     }
                                 ]
@@ -480,6 +480,10 @@
                                         "answers": []
                                     },
                                     {
+                                        "title": "Designated Marksman Rifles (DMR)",
+                                        "answers": []
+                                    },
+                                    {
                                         "title": "VSS",
                                         "answers": []
                                     },
@@ -497,10 +501,6 @@
                                     },
                                     {
                                         "title": "Grenades",
-                                        "answers": []
-                                    },
-                                    {
-                                        "title": "Random",
                                         "answers": []
                                     }
                                 ]
@@ -537,6 +537,10 @@
                                         "answers": []
                                     },
                                     {
+                                        "title": "Designated Marksman Rifles (DMR)",
+                                        "answers": []
+                                    },
+                                    {
                                         "title": "VSS",
                                         "answers": []
                                     },
@@ -554,10 +558,6 @@
                                     },
                                     {
                                         "title": "Grenades",
-                                        "answers": []
-                                    },
-                                    {
-                                        "title": "Random",
                                         "answers": []
                                     }
                                 ]
@@ -594,6 +594,10 @@
                                         "answers": []
                                     },
                                     {
+                                        "title": "Designated Marksman Rifles (DMR)",
+                                        "answers": []
+                                    },
+                                    {
                                         "title": "VSS",
                                         "answers": []
                                     },
@@ -611,10 +615,6 @@
                                     },
                                     {
                                         "title": "Grenades",
-                                        "answers": []
-                                    },
-                                    {
-                                        "title": "Random",
                                         "answers": []
                                     }
                                 ]
@@ -651,6 +651,10 @@
                                         "answers": []
                                     },
                                     {
+                                        "title": "Designated Marksman Rifles (DMR)",
+                                        "answers": []
+                                    },
+                                    {
                                         "title": "VSS",
                                         "answers": []
                                     },
@@ -668,10 +672,6 @@
                                     },
                                     {
                                         "title": "Grenades",
-                                        "answers": []
-                                    },
-                                    {
-                                        "title": "Random",
                                         "answers": []
                                     }
                                 ]
@@ -709,6 +709,10 @@
                                         "answers": []
                                     },
                                     {
+                                        "title": "Designated Marksman Rifles (DMR)",
+                                        "answers": []
+                                    },
+                                    {
                                         "title": "VSS",
                                         "answers": []
                                     },
@@ -726,10 +730,6 @@
                                     },
                                     {
                                         "title": "Grenades",
-                                        "answers": []
-                                    },
-                                    {
-                                        "title": "Random",
                                         "answers": []
                                     }
                                 ]
@@ -762,6 +762,10 @@
                                         "answers": []
                                     },
                                     {
+                                        "title": "Designated Marksman Rifles (DMR)",
+                                        "answers": []
+                                    },
+                                    {
                                         "title": "VSS",
                                         "answers": []
                                     },
@@ -779,10 +783,6 @@
                                     },
                                     {
                                         "title": "Grenades",
-                                        "answers": []
-                                    },
-                                    {
-                                        "title": "Random",
                                         "answers": []
                                     }
                                 ]
@@ -815,6 +815,10 @@
                                         "answers": []
                                     },
                                     {
+                                        "title": "Designated Marksman Rifles (DMR)",
+                                        "answers": []
+                                    },
+                                    {
                                         "title": "VSS",
                                         "answers": []
                                     },
@@ -832,10 +836,6 @@
                                     },
                                     {
                                         "title": "Grenades",
-                                        "answers": []
-                                    },
-                                    {
-                                        "title": "Random",
                                         "answers": []
                                     }
                                 ]
@@ -868,6 +868,10 @@
                                         "answers": []
                                     },
                                     {
+                                        "title": "Designated Marksman Rifles (DMR)",
+                                        "answers": []
+                                    },
+                                    {
                                         "title": "VSS",
                                         "answers": []
                                     },
@@ -885,10 +889,6 @@
                                     },
                                     {
                                         "title": "Grenades",
-                                        "answers": []
-                                    },
-                                    {
-                                        "title": "Random",
                                         "answers": []
                                     }
                                 ]
@@ -921,6 +921,10 @@
                                         "answers": []
                                     },
                                     {
+                                        "title": "Designated Marksman Rifles (DMR)",
+                                        "answers": []
+                                    },
+                                    {
                                         "title": "VSS",
                                         "answers": []
                                     },
@@ -938,10 +942,6 @@
                                     },
                                     {
                                         "title": "Grenades",
-                                        "answers": []
-                                    },
-                                    {
-                                        "title": "Random",
                                         "answers": []
                                     }
                                 ]
@@ -974,6 +974,10 @@
                                         "answers": []
                                     },
                                     {
+                                        "title": "Designated Marksman Rifles (DMR)",
+                                        "answers": []
+                                    },
+                                    {
                                         "title": "VSS",
                                         "answers": []
                                     },
@@ -991,10 +995,6 @@
                                     },
                                     {
                                         "title": "Grenades",
-                                        "answers": []
-                                    },
-                                    {
-                                        "title": "Random",
                                         "answers": []
                                     }
                                 ]
@@ -1032,6 +1032,10 @@
                                         "answers": []
                                     },
                                     {
+                                        "title": "Designated Marksman Rifles (DMR)",
+                                        "answers": []
+                                    },
+                                    {
                                         "title": "VSS",
                                         "answers": []
                                     },
@@ -1049,10 +1053,6 @@
                                     },
                                     {
                                         "title": "Grenades",
-                                        "answers": []
-                                    },
-                                    {
-                                        "title": "Random",
                                         "answers": []
                                     }
                                 ]
@@ -1085,6 +1085,10 @@
                                         "answers": []
                                     },
                                     {
+                                        "title": "Designated Marksman Rifles (DMR)",
+                                        "answers": []
+                                    },
+                                    {
                                         "title": "VSS",
                                         "answers": []
                                     },
@@ -1102,10 +1106,6 @@
                                     },
                                     {
                                         "title": "Grenades",
-                                        "answers": []
-                                    },
-                                    {
-                                        "title": "Random",
                                         "answers": []
                                     }
                                 ]
@@ -1138,6 +1138,10 @@
                                         "answers": []
                                     },
                                     {
+                                        "title": "Designated Marksman Rifles (DMR)",
+                                        "answers": []
+                                    },
+                                    {
                                         "title": "VSS",
                                         "answers": []
                                     },
@@ -1155,10 +1159,6 @@
                                     },
                                     {
                                         "title": "Grenades",
-                                        "answers": []
-                                    },
-                                    {
-                                        "title": "Random",
                                         "answers": []
                                     }
                                 ]
@@ -1191,6 +1191,10 @@
                                         "answers": []
                                     },
                                     {
+                                        "title": "Designated Marksman Rifles (DMR)",
+                                        "answers": []
+                                    },
+                                    {
                                         "title": "VSS",
                                         "answers": []
                                     },
@@ -1208,10 +1212,6 @@
                                     },
                                     {
                                         "title": "Grenades",
-                                        "answers": []
-                                    },
-                                    {
-                                        "title": "Random",
                                         "answers": []
                                     }
                                 ]
@@ -1244,6 +1244,10 @@
                                         "answers": []
                                     },
                                     {
+                                        "title": "Designated Marksman Rifles (DMR)",
+                                        "answers": []
+                                    },
+                                    {
                                         "title": "VSS",
                                         "answers": []
                                     },
@@ -1262,11 +1266,7 @@
                                     {
                                         "title": "Grenades",
                                         "answers": []
-                                    },
-                                    {
-                                        "title": "Random",
-                                        "answers": []
-                                    }                                                
+                                    }
                                 ]
                             },
                             {
@@ -1297,6 +1297,10 @@
                                         "answers": []
                                     },
                                     {
+                                        "title": "Designated Marksman Rifles (DMR)",
+                                        "answers": []
+                                    },
+                                    {
                                         "title": "VSS",
                                         "answers": []
                                     },
@@ -1315,108 +1319,6 @@
                                     {
                                         "title": "Grenades",
                                         "answers": []
-                                    },
-                                    {
-                                        "title": "Random",
-                                        "answers": []
-                                    }                                                
-                                ]
-                            }                            
-                        ]
-                    }
-                ]
-            },
-            {
-                "title": "Course de voitures/motos",
-                "answers": [
-                    {
-                        "title": "Dacias",
-                        "answers": [
-                            {
-                                "title": "Solo",
-                                "answers": [
-                                    {
-                                        "title": "Piégeurs autorisés",
-                                        "answers": []
-                                    },
-                                    {
-                                        "title": "Aucun piégeur",
-                                        "answers": []
-                                    }
-                                ]
-                            },
-                            {
-                                "title": "Duos",
-                                "answers": [
-                                    {
-                                        "title": "Piégeurs autorisés",
-                                        "answers": []
-                                    },
-                                    {
-                                        "title": "Aucun piégeur",
-                                        "answers": []
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "title": "Motos",
-                        "answers": [
-                            {
-                                "title": "Solo",
-                                "answers": [
-                                    {
-                                        "title": "Piégeurs autorisés",
-                                        "answers": []
-                                    },
-                                    {
-                                        "title": "Aucun piégeur",
-                                        "answers": []
-                                    }
-                                ]
-                            },
-                            {
-                                "title": "Duos",
-                                "answers": [
-                                    {
-                                        "title": "Piégeurs autorisés",
-                                        "answers": []
-                                    },
-                                    {
-                                        "title": "Aucun piégeur",
-                                        "answers": []
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "title": "Side-cars",
-                        "answers": [
-                            {
-                                "title": "Solo",
-                                "answers": [
-                                    {
-                                        "title": "Piégeurs autorisés",
-                                        "answers": []
-                                    },
-                                    {
-                                        "title": "Aucun piégeur",
-                                        "answers": []
-                                    }
-                                ]
-                            },
-                            {
-                                "title": "Duos",
-                                "answers": [
-                                    {
-                                        "title": "Piégeurs autorisés",
-                                        "answers": []
-                                    },
-                                    {
-                                        "title": "Aucun piégeur",
-                                        "answers": []
                                     }
                                 ]
                             }
@@ -1427,6 +1329,140 @@
             {
                 "title": "Custom à Scénario (VIP, Hunger Games, ...)",
                 "answers": [
+                    {
+                        "title": "Course de voitures/motos",
+                        "answers": [
+                            {
+                                "title": "Erangel",
+                                "answers": [
+                                    {
+                                        "title": "Dacias",
+                                        "answers": [
+                                            {
+                                                "title": "Solo",
+                                                "answers": [
+                                                    {
+                                                        "title": "Piégeurs autorisés",
+                                                        "answers": []
+                                                    },
+                                                    {
+                                                        "title": "Aucun piégeur",
+                                                        "answers": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "Duos",
+                                                "answers": [
+                                                    {
+                                                        "title": "Piégeurs autorisés",
+                                                        "answers": []
+                                                    },
+                                                    {
+                                                        "title": "Aucun piégeur",
+                                                        "answers": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Motos",
+                                        "answers": [
+                                            {
+                                                "title": "Solo",
+                                                "answers": [
+                                                    {
+                                                        "title": "Piégeurs autorisés",
+                                                        "answers": []
+                                                    },
+                                                    {
+                                                        "title": "Aucun piégeur",
+                                                        "answers": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "Duos",
+                                                "answers": [
+                                                    {
+                                                        "title": "Piégeurs autorisés",
+                                                        "answers": []
+                                                    },
+                                                    {
+                                                        "title": "Aucun piégeur",
+                                                        "answers": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Side-cars",
+                                        "answers": [
+                                            {
+                                                "title": "Solo",
+                                                "answers": [
+                                                    {
+                                                        "title": "Piégeurs autorisés",
+                                                        "answers": []
+                                                    },
+                                                    {
+                                                        "title": "Aucun piégeur",
+                                                        "answers": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "title": "Duos",
+                                                "answers": [
+                                                    {
+                                                        "title": "Piégeurs autorisés",
+                                                        "answers": []
+                                                    },
+                                                    {
+                                                        "title": "Aucun piégeur",
+                                                        "answers": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Miramar",
+                                "answers": [
+                                    {
+                                        "title": "Mirado",
+                                        "answers": [
+                                            {
+                                                "title": "Solo",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Duos",
+                                                "answers": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Motos",
+                                        "answers": [
+                                            {
+                                                "title": "Solo",
+                                                "answers": []
+                                            },
+                                            {
+                                                "title": "Duos",
+                                                "answers": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
                     {
                         "title": "Chasse à l'homme",
                         "answers": []
@@ -1461,7 +1497,7 @@
                         ]
                     },
                     {
-                        "title": "Capture de véhicule",
+                        "title": "CQB",
                         "answers": []
                     },
                     {
@@ -1525,7 +1561,7 @@
                 ]
             },
             {
-                "title": "War Mode Classique (plantages fréquents)",
+                "title": "War Mode Classique (⚠️ plantages fréquents)",
                 "answers": [
                     {
                         "title": "Erangel",
@@ -3920,19 +3956,6 @@
                                         "title": "3 zones à capturer",
                                         "answers": []
                                     }
-                                ]
-                            },
-                            {
-                                "title": "Grenades",
-                                "answers": [
-                                    {
-                                        "title": "1 zone à capturer",
-                                        "answers": []
-                                    },
-                                    {
-                                        "title": "3 zones à capturer",
-                                        "answers": []
-                                    }                                    
                                 ]
                             },
                             {

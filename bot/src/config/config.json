@@ -1,0 +1,42 @@
+{
+    "prefix": "!",
+    "defaultStatus": "Fox, mais t'es où? Pas là",
+    "roles": {
+        "adminRoleName": "Responsable Custom"
+    },
+    "channels": {
+        "pollChannelName": "custom-vote",
+        "vocalChannelName": "En Attente",
+        "vocalTeamChannelWildcard": "Team ",
+        "vocalDispatchChannelName": "⚪Dispatch"
+    },
+    "voice": {
+        "streamOptions": { 
+            "seek": 0, 
+            "volume": 10 
+        },
+        "allowedVoices": ["default", "joyeux", "taverne"],
+        "currentVoice": "default",
+        "defaultVolume": 10
+    },
+    "delays": {
+        "maxResponseDelay": 10,
+        "betweenQuestionsDelay": 3,
+        "startPollDelay": 0,
+        "startRandomizerDelay": 10,
+        "awaitEmojiTempoPerSec": 0.2,
+        "defaultCountdownLimit": 120,
+        "countdownStep": 30,
+        "defaultTeamLimit": 2
+    },
+    "customs": {
+        "lastParams": {},
+        "inProgress": []
+    },
+    "images": {
+        "embed": {
+            "vote": "https://vamourir.fr/newlogo.png",
+            "medium": "https://vamourir.fr/newlogo.png"
+        }
+    }
+}

@@ -1,17 +1,20 @@
 // requirements
 const Discord = require('discord.js')
 const auth = require('../credentials/auth.json')
+
+const commands = {}
+
 const fs = require('fs')
 const pollQuestions = require('../polls/customGames.json')
 const rematchQuestions = require('../polls/rematchGames.json')
 const emojiCharacters = require('./emojiCharacters')
-const streamOptions = { seek: 0, volume: 100 }
 
 var path = require('path')
 var appDir = path.dirname(require.main.filename)
 
 // init
 const client = new Discord.Client();
+let commands = new Discord.Collection()
 
 // specific discord configuration
 const adminRoleName = 'Responsable Custom';
@@ -19,6 +22,7 @@ const pollChannelName = 'custom-vote';
 const vocalChannelName = 'En Attente';
 const vocalTeamChannelWildcard = 'Team ';
 const vocalDispatchChannelName = '⚪Dispatch';
+const allowedVoices = ['joyeux', 'normal', 'taverne']
 
 // poll timers
 const maxResponseDelay = 30;
@@ -40,8 +44,22 @@ let lastParamsStr = "";
 let voteChannel = null;
 let vocalChannel = null;
 let dispatchChannel = null;
+let streamOptions = { seek: 0, volume: 10 }
+let defaultVoice = 'normal'
 
 let allowedCommands = [
+    {
+        name: "Mise à jour de la voix du Bot",
+        command: '!voice',
+        helper: '!voice <normal|taverne|joyeux>',
+        description: 'Mise à jour de la voix du Bot parmis la liste : normal, taverne et joyeux'
+    },
+    {
+        name: "Mise à jour du volume sonore du Bot",
+        command: '!volume',
+        helper: '!volume <int>',
+        description: 'Mise à jour du volume sonore du Bot à la valeur <int> (? ne connaissons pas encore le range) [BETA]'
+    },
     {
         name: "Mise à jour du statut de présence de CustomVote",
         command: '!status',
@@ -52,7 +70,7 @@ let allowedCommands = [
         name: "Jouer un son <sound> avec <voice>",
         command: '!mp3',
         helper: '!mp3 <voice> <sound>',
-        description: `Jouer un son <sound> avec <voice>`
+        description: `Jouer un son <sound> avec <voice> [BETA]`
     },
     {
         name: "Liste des commandes disponibles",
@@ -236,6 +254,25 @@ function initQuestionObject() {
         "randomized": false,
         "success": false
     }    
+}
+
+function loadCommands() {
+
+    const commandsDirectory = `${appDir}/../commands`
+
+    fs.readdir(commandsDirectory, function (err, files) {
+
+        if (err) {
+            return console.log(`ERR  | Could not open ${commandsDirectory} folder`)
+        }
+
+        files.forEach((file) => {
+            console.log(`MOD  | Loading command <${file}>`)
+            require(file)(commands)
+        })
+
+    })
+
 }
 
 // main
@@ -440,6 +477,70 @@ function startPoll(voteChannel, questionObj, recapChoices = [], random = false) 
         });
 }
 
+function file_exists(filePath) {
+    return new Promise((resolve, reject) => {
+        fs.access(filePath, fs.F_OK, (err) => {
+            if (err) {
+                console.error(err)
+                return reject(err);
+            }
+            //file exists
+            resolve();
+        }) 
+    });
+}
+
+function playFile(message, mp3Sound, mp3Voice) {
+
+    return new Promise((resolve, reject) => {
+
+        let prefix = 'teams_'
+        let mp3FilePath = appDir + '/../sounds/' + mp3Voice + '/' + prefix + mp3Sound + '.mp3'
+
+        if (file_exists(mp3FilePath)) {
+
+            if (message.member.voiceChannel) {
+
+                message.member.voiceChannel.join()
+                    .then(connection => {
+        
+                    const dispatcher = connection.playFile(mp3FilePath, streamOptions)
+                
+                    dispatcher.on('end', async (end) => {
+    
+                        await new Promise(done => setTimeout(done, 5 * 1000));
+    
+                        connection.disconnect()
+
+                        resolve();
+                    })
+        
+                })
+        
+            } else {
+        
+                let err = 'You need to join a voice channel first!'
+
+                message.reply(err);
+
+                return reject(err);
+
+            }
+
+        } else {
+
+            let err = 'File not found ' + mp3FilePath
+
+            message.reply(err);
+
+            return reject(err);
+
+        }
+    
+    })
+
+}
+
 // checks if the input message is an allowed command or not
 // returns an array of arguments and command
 function isAllowedCommand(message) {
@@ -499,6 +600,34 @@ client.on('message', async message => {
     // do the action
     switch (commandScan.command) {
 
+        case '!voice':
+
+
+
+            newVoice = allowedVoices.includes(commandScan.args[0]) ? commandScan.args[0] : ''
+
+            if (newVoice != '') {
+
+                defaultVoice = newVoice
+
+                message.reply(`voix définie à ${newVoice}`)
+
+            }
+
+            break;
+
+        case '!volume':
+
+            let newVolume = commandScan.args[0] ? parseInt(commandScan.args[0]) : 10
+
+            if (newVolume > 100) newVolume = 100
+
+            streamOptions = { volume: newVolume }
+
+            message.reply(`, j'ai mis à jour le volume à ${newVolume}`)
+
+            break;
+
         case '!status':
 
             let newStatus = commandScan.args ? commandScan.args.join(' ') : ''
@@ -513,7 +642,7 @@ client.on('message', async message => {
 
                 console.log(`SYS  | Presence updated by ${message.member.name} : ${newStatus}`)
 
-                message.reply('Presence updated')
+                message.reply(`le message de présence a été mis à jour : ${newStatus}`)
 
             }
 
@@ -523,47 +652,9 @@ client.on('message', async message => {
 
             // move or not ?
             let mp3Voice = commandScan.args[0]
-            let mp3Sound = commandScan.args[1]
+            let mp3Sound = commandScan.args[1] && commandScan.args[1] != '' ? commandScan.args[1] : defaultVoice
             
-            let prefix = 'teams_'
-
-            let mp3FilePath = appDir + '/../sounds/' + mp3Voice + '/' + prefix + mp3Sound + '.mp3'
-
-            // file
-            fs.access(mp3FilePath, fs.F_OK, async (err) => {
-
-                if (err) {
-
-                    message.reply('File not found ' + mp3FilePath)
-
-                } else {
-                    
-                    if (message.member.voiceChannel) {
-
-                        await message.member.voiceChannel.join()
-                            .then(connection => {
-
-                                const dispatcher = connection.playFile(mp3FilePath, streamOptions)
-                            
-                                dispatcher.on('end', async (end) => {
-
-                                    await new Promise(done => setTimeout(done, 5 * 1000));
-
-                                    connection.disconnect()
-                                })
-        
-                            })
-                        
-
-                    } else {
-
-                        message.reply('You need to join a voice channel first!');
-
-                    }            
-        
-                }
-
-            })
+            await playFile(message, mp3Sound, mp3Voice)
 
             break;
 
@@ -681,8 +772,12 @@ client.on('message', async message => {
             let sourceVocalChannels = getVocalChannelStartingWith(message, vocalTeamChannelWildcard)
 
             for (let sourceVocalChannel of sourceVocalChannels.values()) {
+
+                await playFile(message, 'before_switch', defaultVoice)
+
                 moveUsers(sourceVocalChannel, vocalChannel, commandScan.command,
                     `La Custom vient de se finir. Vous avez été déplacé vers \`${vocalChannel.name}\`.`) 
+
             }
             
 
@@ -782,6 +877,8 @@ client.on('message', async message => {
 
                 // if there is a move demand
                 if (movePlayers) {
+
+                    await playFile(message, 'before_switch', defaultVoice)
 
                     resultStr += `\nDéplacement des joueurs dans les channels vocaux ...`
 

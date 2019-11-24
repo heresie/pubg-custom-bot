@@ -25,6 +25,7 @@
   "homepage": "https://gitlab.com/heresie/pubg-custom-bot",
   "dependencies": {
     "discord.js": "^11.5.1",
+    "enmap": "^5.2.3",
     "erlpack": "github:hammerandchisel/erlpack",
     "ffbinaries": "^1.1.4",
     "libsodium-wrappers": "^0.7.6",
