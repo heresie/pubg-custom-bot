@@ -16,4 +16,4 @@ RUN mkdir -p ${WORKDIR} && \
 
 COPY bot/ ${WORKDIR}
 
-ENTRYPOINT ["node", "/bot/src/index.js"]
+ENTRYPOINT ["node", "/bot/src/main.js"]
