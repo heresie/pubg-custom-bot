@@ -155,34 +155,44 @@ module.exports = {
     },
 
     getRandomInt(min, max) {
+
         return Math.floor(Math.random() * (max - min + 1) + min)
+
     },
 
     setMeta(client, name, key, value) {
+
         console.log(`DEBG | Meta->set(${name}.${key}, ${value})`)
         client.config[name] = {[key]: value}
-        console.log(client.config[name])
+        
     },
 
     getMeta(client, name, key) {
+
         console.log(`DEBG | Meta->get(${name}.${key})`)
-        console.log(client.config[name][key])
         return (client.config[name][key]) ? client.config[name][key] : ''
+
     },
 
     lockChannel(client, channel) {
+
         console.log(`DEBG | Locking Channel ${channel.id}`)
         client.config.customs.inProgress.push(channel.id)
+
     },
 
     isLockedChannel(client, channel) {
+
         console.log(`DEBG | Checking Lock Channel ${channel.id}`)
         return client.config.customs.inProgress.includes(channel.id)
+
     },
 
     unlockChannel(client, channel) {
+
         console.log(`DEBG | Unlocking Channel ${channel.id}`)
         client.config.customs.inProgress.splice(client.config.customs.inProgress.indexOf(channel.id), 1)
+
     }
     
 }
