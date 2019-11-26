@@ -148,6 +148,12 @@ module.exports = {
     
     },
 
+    getVocalChannelStartingWithFromGuild(guild, channelStartString) {
+
+        return guild.channels.filter(channel => channel.type === 'voice' && channel.name.startsWith(channelStartString))
+    
+    },
+
     pad2(nb) {
 
         return (nb < 10 ? '0' : '') + nb
@@ -170,7 +176,7 @@ module.exports = {
     getMeta(client, name, key) {
 
         console.log(`DEBG | Meta->get(${name}.${key})`)
-        return (client.config[name][key]) ? client.config[name][key] : ''
+        return client.config[name] && client.config[name][key] ? client.config[name][key] : ''
 
     },
 

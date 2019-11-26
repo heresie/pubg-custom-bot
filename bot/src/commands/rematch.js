@@ -7,9 +7,6 @@ exports.roles         = ['Responsable Custom']
 
 exports.run = (client, message, args) => {
 
-    console.log(client.config.customs.lastParams)
-    console.log(client.config.customs.inProgress)
-
     // no concurrent votes & needs some last parameters to vote for
     if (client.tools.isLockedChannel(client, message.channel)) {
         message.author.send(`un vote est déjà en cours dans ce channel`)
