@@ -15,7 +15,8 @@ module.exports = async (client, oldMember, newMember) => {
 
         if (channel && (!channel.members || (channel.members && channel.members.size === 0))) {
 
-            console.log(`${member.displayName} left ${channel.name} and the channel is empty : deleting`)
+            console.log(`EVENT | voiceStateUpdate | ${member.displayName} left ${channel.name} and the channel is empty, deleting channel.`)
+
             channel.delete(`Temporary channel empty`)
 
         }
@@ -29,16 +30,21 @@ module.exports = async (client, oldMember, newMember) => {
         let channel = newUserChannel
 
         let channelName = `${userChannelWildcard} ${member.displayName}`
-        let customChannels = client.channels.find(channel => channel.name.startsWith(userChannelWildcard))
+        let customChannels = client.channels.find(channel => channel.name && channel.name.startsWith(userChannelWildcard))
         let nbCustomChannels = customChannels ? customChannels.length : 0
         let channelPosition = client.channels.find(channel => channel.name === dispatchChannelName).position + (nbCustomChannels + 1);
         let categoryChannel = client.channels.find(channel => channel.type === "category" && channel.name === categoryName)
 
+        console.log(`EVENT | voiceStateUpdate | ${member.displayName} entered Dispatch channel.`)
+
+        // await the potential previous channel deletion ...
         await new Promise(done => setTimeout(done, 1 * 1000))
 
         let existingChannel = client.channels.find(channel => channel.type === "voice" && channel.name === channelName)
 
         if (existingChannel) {
+
+            console.log(`EVENT | voiceStateUpdate | ${channelName} exists, moving user inside.`)
 
             member.setVoiceChannel(existingChannel)
 
@@ -67,6 +73,8 @@ module.exports = async (client, oldMember, newMember) => {
                 ],
                 (`Created by ${newMember.displayName} via /create command`)
             ).then(moveChannel => {
+
+                console.log(`EVENT | voiceStateUpdate | ${channelName} created, moving user indide.`)
 
                 member.setVoiceChannel(moveChannel)
 

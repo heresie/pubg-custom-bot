@@ -34,7 +34,7 @@ fs.readdir(`${appDir}/events/`, (err, files) => {
 
         let eventName = file.split(".")[0]
 
-        console.log(`INIT | Loading event {${eventName}}`)
+        console.log(`INIT  | Loading event {${eventName}}`)
 
         // super-secret recipe to call events with all their proper arguments *after* the `client` var.
         // without going into too many details, this means each event will be called with the client argument,
@@ -61,7 +61,7 @@ fs.readdir(`${appDir}/commands/`, (err, files) => {
 
         let commandName = file.split(".")[0]
 
-        console.log(`INIT | Loading command {${commandName}}`)
+        console.log(`INIT  | Loading command {${commandName}}`)
 
         // Here we simply store the whole thing in the command Enmap. We're not running it right now.
         client.commands.set(commandName, props)
