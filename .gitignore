@@ -1,1 +1,2 @@
 bot/node_modules/*
+bot/src/config/credentials.json
