@@ -11,3 +11,11 @@ Create file `bot/src/config/credentials.json` and add the Discord that you recei
 	"token": MYTOKEN
 }
 ```
+
+## Start project
+
+1. Create a token and define `bot/src/config/credentials.json`
+   See [the official Discord page](https://discordapp.com/developers/applications/)
+2. ```shell
+   docker-compose up --build -d
+   ```

@@ -1,3 +1,11 @@
+# 2.0.6
+
+ - FIX: Major and minor bugfixes
+
+# 2.0.0
+
+ - NEW: Complete revamp of the software
+
 # 1.6.2
 
  - FIX: Dockerfile optimisations
