@@ -63,7 +63,7 @@ module.exports = async (client, oldMember, newMember) => {
         let customChannels = client.channels.find(channel => channel.type === "voice" && channel.name && channel.name.startsWith(userChannelWildcard))
 
         // determine the future position of the channel
-        let channelPosition = (dispatchChannel ? dispatchChannel.position : 0) + (customChannels ? customChannels.length : 0)) + 1
+        let channelPosition = (dispatchChannel ? dispatchChannel.position : 0) + (customChannels ? customChannels.length : 0) + 1
 
         // create the channel
         member.guild.createChannel(

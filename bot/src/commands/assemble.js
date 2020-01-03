@@ -11,10 +11,7 @@ exports.run = async (client, message, args) => {
 
     for (let sourceVocalChannel of sourceVocalChannels.values()) {
 
-        //await client.tools.playFile(client, message, 'end_game', client.config.voice.currentVoice)
-
-        client.tools.moveUsers(sourceVocalChannel, vocalChannel, 'assemble',
-            `La Custom vient de se finir. Vous avez été déplacé vers \`${vocalChannel.name}\`.`) 
+        client.tools.moveUsers(sourceVocalChannel, vocalChannel, 'assemble')
 
     }
 
