@@ -74,7 +74,7 @@
 ## Invitez votre bot
 Dans l'URL suivante, remplacez `[MON_CLIENT_ID]` par le `CLIENT ID` que vous a donné Discord lorsque vous avez déclaré votre application.
 ```
-https://discordapp.com/oauth2/authorize?client_id=[MON_CLIENT_ID]&permissions=53509184&scope=bot
+https://discordapp.com/oauth2/authorize?client_id=[MON_CLIENT_ID]&permissions=2147482999&scope=bot
 ```
 Allez sur cette adresse et autorisez le bot à rejoindre votre serveur Discord.
 ## Configuration
