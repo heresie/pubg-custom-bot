@@ -126,5 +126,5 @@ La configuration du bot se fait dans le fichier de configuration `bot/src/config
 ```
 ## Bugs connus
  
- - Problèmes pour jouer des fichiers audio sous Windows
+ - Problèmes pour jouer des fichiers audio sous Windows    
    Installer ffmpeg : `npm i ffmpeg-binaries@^3.2.2-3` n'y changera rien.
