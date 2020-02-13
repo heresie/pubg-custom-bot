@@ -5,7 +5,8 @@ ENV WORKDIR=/bot
 RUN mkdir -p ${WORKDIR}  && \
     apt-get update       && \
     apt-get install -y      \
-              ffmpeg
+              ffmpeg     && \
+    rm -rf /var/lib/apt/lists/*
 
 COPY bot/package.json ${WORKDIR}
 
